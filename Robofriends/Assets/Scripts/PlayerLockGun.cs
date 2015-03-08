@@ -21,7 +21,8 @@ public class PlayerLockGun : MonoBehaviour {
 			yield return null;
 		}
 
-
+		GetComponent<LineRenderer>().SetPosition(0, Vector3.zero);
+		GetComponent<LineRenderer>().SetPosition(1, Vector3.zero);
 
 		Time.timeScale = 1.0f;
 		clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);

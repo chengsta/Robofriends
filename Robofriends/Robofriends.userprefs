@@ -1,15 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerLockGun.cs">
     <Files>
       <File FileName="Assets\MDM_import\Scripts\Cube.cs" Line="5" Column="1" />
       <File FileName="Assets\Scripts\GroundChecker.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerLockGun.cs" Line="52" Column="1" />
+      <File FileName="Assets\Scripts\PlayerLockGun.cs" Line="25" Column="59" />
       <File FileName="Assets\Scripts\Robot.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RobotJump.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Exit.cs" Line="17" Column="1" />
-      <File FileName="Assets\Scripts\Spikes.cs" Line="17" Column="20" />
+      <File FileName="Assets\Scripts\Exit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Spikes.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GunRotate.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
