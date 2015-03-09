@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerLockGun : MonoBehaviour {
-	public float timescale;
+	public float slowdown;
 	private Robot lockedRobot;
 
 	// Use this for initialization
@@ -13,11 +13,22 @@ public class PlayerLockGun : MonoBehaviour {
 	IEnumerator fireGun() {
 		Vector3 clickPos;
 		Vector3 direction;
+		int layerMask = LayerMask.GetMask("Platform", "Robot");
+		RaycastHit hit = new RaycastHit();
+
 		while (Input.GetButton("Fire1")) {
 			clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			clickPos.z = 0;
+
+			Vector3 lineEndpoint = clickPos;
+			direction = clickPos - transform.position;
+
+			if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, layerMask)) {
+				lineEndpoint = hit.point;
+			}
+
 			GetComponent<LineRenderer>().SetPosition(0, transform.position);
-			GetComponent<LineRenderer>().SetPosition(1, clickPos);
+			GetComponent<LineRenderer>().SetPosition(1, lineEndpoint);
 			yield return null;
 		}
 
@@ -25,14 +36,13 @@ public class PlayerLockGun : MonoBehaviour {
 		GetComponent<LineRenderer>().SetPosition(1, Vector3.zero);
 
 		Time.timeScale = 1.0f;
+		Time.fixedDeltaTime = Time.fixedDeltaTime * slowdown;
 		clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 		direction = clickPos - transform.position;
 		direction.z = 0;
 		direction.Normalize();
-		
-		RaycastHit hit = new RaycastHit();
-		int layerMask = LayerMask.GetMask("Platform", "Robot");
+
 		if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, layerMask)) {
 			Robot r;
 			if (r = hit.collider.gameObject.GetComponent<Robot>()) {
@@ -49,7 +59,8 @@ public class PlayerLockGun : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Fire1")) {
-			Time.timeScale = timescale;
+			Time.timeScale = Time.timeScale / slowdown;
+			Time.fixedDeltaTime = Time.fixedDeltaTime / slowdown;
 			StartCoroutine("fireGun");
 		}
 		else if (Input.GetButtonDown("Fire2")) {
