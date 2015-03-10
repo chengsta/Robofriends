@@ -82,8 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
-  finalPosition: 0
-  initialPosition: 0
+  DistanceToMove: 10
   timer: 0
 --- !u!1001 &100100000
 Prefab:
