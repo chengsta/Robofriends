@@ -1,16 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerLockGun.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Door.cs">
     <Files>
-      <File FileName="Assets\MDM_import\Scripts\Cube.cs" Line="5" Column="1" />
-      <File FileName="Assets\Scripts\GroundChecker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerLockGun.cs" Line="25" Column="59" />
-      <File FileName="Assets\Scripts\Robot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RobotJump.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Exit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Spikes.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GunRotate.cs" Line="13" Column="3" />
+      <File FileName="..\..\MDM\MultiDimensionalMe\Assets\Scripts\Exit.cs" Line="1" Column="1" />
+      <File FileName="..\..\MDM\MultiDimensionalMe\Assets\Scripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="..\..\MDM\MultiDimensionalMe\Assets\Scripts\Cube.cs" Line="1" Column="1" />
+      <File FileName="..\..\MDM\MultiDimensionalMe\Assets\Scripts\LockController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerLockGun.cs" Line="80" Column="1" />
+      <File FileName="Assets\Scripts\Door.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
