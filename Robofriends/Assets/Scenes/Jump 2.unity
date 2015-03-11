@@ -3045,9 +3045,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Arrow Keys to move, space to jump
-
-    Get one of the boxes to the green exit'
+  m_Text: 
 --- !u!222 &1325467382
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3874,9 +3872,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: 'Arrow Keys to move, space to jump
-
-        Get one of the boxes to the green exit'
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
