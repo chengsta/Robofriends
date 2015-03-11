@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581877bd52271114998064879b321fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: Scene_2
+  nextLevel: Main_menu
 --- !u!23 &331629477
 Renderer:
   m_ObjectHideFlags: 0
@@ -898,6 +898,7 @@ GameObject:
   - 33: {fileID: 656575830}
   - 65: {fileID: 656575829}
   - 23: {fileID: 656575828}
+  - 120: {fileID: 656575831}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -959,6 +960,40 @@ MeshFilter:
   m_PrefabInternal: {fileID: 46492753}
   m_GameObject: {fileID: 656575826}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!120 &656575831
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12022266, guid: b1ec96ef0578d3f45a4ef0b0f3e6361c,
+    type: 2}
+  m_PrefabInternal: {fileID: 46492753}
+  m_GameObject: {fileID: 656575826}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: .400000006
+    endWidth: .400000006
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!1001 &708524609
 Prefab:
   m_ObjectHideFlags: 0
@@ -1221,7 +1256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11487372, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
       propertyPath: nextLevel
-      value: Scene_2
+      value: Main_menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
@@ -1759,18 +1794,15 @@ GameObject:
 --- !u!114 &1012620661
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11487044, guid: 1392cfd3f898d4848bbcda953ffc5c23,
+  m_PrefabParentObject: {fileID: 11476848, guid: 1392cfd3f898d4848bbcda953ffc5c23,
     type: 2}
   m_PrefabInternal: {fileID: 778595972}
   m_GameObject: {fileID: 1012620660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53abc96a62c36a84abf3dc47197a580f, type: 3}
+  m_Script: {fileID: 11500000, guid: c3f3000fc4c0fc9409ad18e98f0852c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockColor: {fileID: 2100000, guid: 24d063c477b733c4e9d500064635be38, type: 2}
-  unlockColor: {fileID: 2100000, guid: 4e5990b7dd3b3124189f376cc3d70a73, type: 2}
-  players: []
 --- !u!81 &1012620662
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2549,7 +2581,7 @@ Renderer:
     type: 2}
   m_PrefabInternal: {fileID: 778595972}
   m_GameObject: {fileID: 2063514204}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
