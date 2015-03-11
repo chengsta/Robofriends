@@ -18,7 +18,7 @@ public class GroundChecker : MonoBehaviour {
 	public bool IsGrounded() {
 
 		RaycastHit hit;
-		int lm = LayerMask.GetMask("Platform");
+		int lm = LayerMask.GetMask("Platform", "Glass");
 		//if (GetComponentInParent<PlayerMovement>().gravity < 0) {
 			// print("on ground/normal gravity");
 			if (Physics.Raycast(transform.position + width, -Vector3.up, out hit, distToGround + 0.1f, lm))
