@@ -4,10 +4,11 @@ using System.Collections;
 public class PlayerLockGun : MonoBehaviour {
 	public float slowdown;
 	private Robot lockedRobot;
+	private LineRenderer connection;	
 
 	// Use this for initialization
 	void Start () {
-	
+		connection = GetComponentInChildren<LineRenderer>();
 	}
 
 	IEnumerator fireGun() {
@@ -51,6 +52,8 @@ public class PlayerLockGun : MonoBehaviour {
 				}
 				r.SetParent(gameObject);
 				lockedRobot = r;
+				connection.SetPosition(0, this.transform.position);
+				connection.SetPosition(1, r.transform.position);
 			}
 		}
 	}
@@ -58,6 +61,16 @@ public class PlayerLockGun : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (lockedRobot) {
+			connection.SetPosition(0, this.transform.position);
+			connection.SetPosition(1, lockedRobot.transform.position);
+		}
+
+		else {
+			connection.SetPosition(0, Vector3.zero);
+			connection.SetPosition(1, Vector3.zero);
+		}
+
 		if (Input.GetButtonDown("Fire1")) {
 			Time.timeScale = Time.timeScale / slowdown;
 			Time.fixedDeltaTime = Time.fixedDeltaTime / slowdown;
