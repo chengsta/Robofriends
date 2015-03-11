@@ -92,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.4399996, y: 2.28999996, z: 0}
+  m_LocalPosition: {x: 6.36999989, y: 13.0100002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 402362}
@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowdown: 5
+  maxShootDistance: 100
 --- !u!120 &12058212
 LineRenderer:
   m_ObjectHideFlags: 1

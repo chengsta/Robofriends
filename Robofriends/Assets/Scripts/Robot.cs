@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Robot : MonoBehaviour {
+//	PhysicMaterial frictionless;
 	Rigidbody rigidbody;
 
 	public virtual bool CanJump() {
@@ -21,15 +22,20 @@ public class Robot : MonoBehaviour {
 	public void SetParent(GameObject go) {
 		Destroy(gameObject.rigidbody);
 		transform.parent = go.transform;
-		
+
+//		collider.material = frictionless;
 	}
 
 	public void ReleaseParent() {
-		transform.parent = null;
+
 		Rigidbody rb = gameObject.AddComponent<Rigidbody>() as Rigidbody;
 
 		rb.freezeRotation = true;
 		rb.constraints = rb.constraints | RigidbodyConstraints.FreezePositionZ;
+
+		rb.velocity = transform.parent.rigidbody.velocity;
+
+		transform.parent = null;
 		
 	}
 }

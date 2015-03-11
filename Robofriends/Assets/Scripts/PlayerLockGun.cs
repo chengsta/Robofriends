@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerLockGun : MonoBehaviour {
 	public float slowdown;
 	private Robot lockedRobot;
+	public float maxShootDistance;
 
 	// Use this for initialization
 	void Start () {
@@ -20,11 +21,15 @@ public class PlayerLockGun : MonoBehaviour {
 			clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			clickPos.z = 0;
 
-			Vector3 lineEndpoint = clickPos;
+			Vector3 lineEndpoint = new Vector3();
 			direction = clickPos - transform.position;
 
 			if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, layerMask)) {
 				lineEndpoint = hit.point;
+			}
+			else {
+				direction.Normalize();
+				lineEndpoint = transform.position + (direction * maxShootDistance);
 			}
 
 			GetComponent<LineRenderer>().SetPosition(0, transform.position);
