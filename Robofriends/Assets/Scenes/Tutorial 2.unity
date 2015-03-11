@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowdown: 5
+  maxShootDistance: 0
 --- !u!120 &296498355
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -542,7 +543,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 708524609}
   m_GameObject: {fileID: 384200350}
-  m_Material: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -626,7 +627,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 690392067}
   m_GameObject: {fileID: 504156014}
-  m_Material: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -762,7 +763,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 1038450523}
   m_GameObject: {fileID: 641679374}
-  m_Material: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1167,7 +1168,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 1642532409}
   m_GameObject: {fileID: 882588319}
-  m_Material: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1287,7 +1288,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 933446183}
   m_GameObject: {fileID: 1006220319}
-  m_Material: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1676,7 +1677,7 @@ MonoBehaviour:
 
     Right click to UNLOCK
 
-    Things might slow down a little...'
+    Shooting might slow things down'
 --- !u!222 &1538066216
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1769,7 +1770,7 @@ Prefab:
 
         Right click to UNLOCK
 
-        Things might slow down a little...'
+        Shooting might slow things down'
       objectReference: {fileID: 0}
     - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1921,7 +1922,6 @@ GameObject:
   - 33: {fileID: 1749101844}
   - 65: {fileID: 1749101843}
   - 23: {fileID: 1749101842}
-  - 120: {fileID: 1749101845}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1983,40 +1983,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1637214765}
   m_GameObject: {fileID: 1749101840}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!120 &1749101845
-LineRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12016988, guid: b1ec96ef0578d3f45a4ef0b0f3e6361c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1637214765}
-  m_GameObject: {fileID: 1749101840}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 8340dc681a3d26844934656e3ab08586, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
-  m_Parameters:
-    startWidth: 1
-    endWidth: 1
-    m_StartColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_EndColor:
-      serializedVersion: 2
-      rgba: 4294967295
-  m_UseWorldSpace: 1
 --- !u!1 &1807006109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,7 +2171,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 1284443198}
   m_GameObject: {fileID: 2134149876}
-  m_Material: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
