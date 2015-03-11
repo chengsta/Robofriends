@@ -59,6 +59,7 @@ public class PlayerLockGun : MonoBehaviour {
 				lockedRobot = r;
 				connection.SetPosition(0, this.transform.position);
 				connection.SetPosition(1, r.transform.position);
+				StartCoroutine("drawLine");
 			}
 		}
 	}
@@ -66,16 +67,6 @@ public class PlayerLockGun : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (lockedRobot) {
-			connection.SetPosition(0, this.transform.position);
-			connection.SetPosition(1, lockedRobot.transform.position);
-		}
-
-		else {
-			connection.SetPosition(0, Vector3.zero);
-			connection.SetPosition(1, Vector3.zero);
-		}
-
 		if (Input.GetButtonDown("Fire1")) {
 			Time.timeScale = Time.timeScale / slowdown;
 			Time.fixedDeltaTime = Time.fixedDeltaTime / slowdown;
@@ -85,9 +76,20 @@ public class PlayerLockGun : MonoBehaviour {
 			if (lockedRobot) {
 				lockedRobot.ReleaseParent();
 				lockedRobot = null;
+
+				//remove connection line
+				StopCoroutine("drawLine");
+				connection.SetPosition(0, Vector3.zero);
+				connection.SetPosition(1, Vector3.zero);
 			}
 		}
+	}
 
-
+	IEnumerator drawLine() {
+		while(lockedRobot) {
+			connection.SetPosition(0, this.transform.position);
+			connection.SetPosition(1, lockedRobot.transform.position);
+			yield return null;
+		}
 	}
 }
