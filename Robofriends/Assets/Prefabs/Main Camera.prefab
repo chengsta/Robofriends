@@ -30,7 +30,7 @@ GameObject:
   - 92: {fileID: 9287044}
   - 124: {fileID: 12487044}
   - 81: {fileID: 8187044}
-  - 114: {fileID: 11487044}
+  - 114: {fileID: 11476848}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -101,7 +101,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -148,7 +148,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187044}
   m_Enabled: 1
---- !u!114 &11487044
+--- !u!114 &11476848
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -156,12 +156,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 187044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53abc96a62c36a84abf3dc47197a580f, type: 3}
+  m_Script: {fileID: 11500000, guid: c3f3000fc4c0fc9409ad18e98f0852c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockColor: {fileID: 2100000, guid: 24d063c477b733c4e9d500064635be38, type: 2}
-  unlockColor: {fileID: 2100000, guid: 4e5990b7dd3b3124189f376cc3d70a73, type: 2}
-  players: []
 --- !u!124 &12487044
 Behaviour:
   m_ObjectHideFlags: 1

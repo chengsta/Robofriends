@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Door.unity
   - enabled: 1
+    path: Assets/Scenes/Main_menu.unity
+  - enabled: 1
     path: Assets/Scenes/Jump.unity
   - enabled: 1
     path: Assets/Scenes/Jump 1.unity
