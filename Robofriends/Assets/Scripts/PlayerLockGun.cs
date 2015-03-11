@@ -9,7 +9,7 @@ public class PlayerLockGun : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		connection = GetComponentInChildren<LineRenderer>();
+		connection = transform.FindChild("Gun").GetComponentInChildren<LineRenderer>();
 	}
 
 	IEnumerator fireGun() {
