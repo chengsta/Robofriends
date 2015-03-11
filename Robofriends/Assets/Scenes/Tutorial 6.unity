@@ -586,7 +586,7 @@ GameObject:
   - 65: {fileID: 331629478}
   - 23: {fileID: 331629477}
   - 114: {fileID: 331629476}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ Transform:
   m_GameObject: {fileID: 331629475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.8999996, y: 2.38000011, z: 0}
-  m_LocalScale: {x: 1, y: 2.00000191, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
