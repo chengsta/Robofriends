@@ -4,11 +4,8 @@ using System.Collections;
 public class PlayerLockGun : MonoBehaviour {
 	public float slowdown;
 	private Robot lockedRobot;
-<<<<<<< HEAD
 	public float maxShootDistance;
-=======
 	private LineRenderer connection;	
->>>>>>> origin/master
 
 	// Use this for initialization
 	void Start () {
