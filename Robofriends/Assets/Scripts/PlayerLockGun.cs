@@ -83,6 +83,15 @@ public class PlayerLockGun : MonoBehaviour {
 				connection.SetPosition(1, Vector3.zero);
 			}
 		}
+		else if (Input.GetButtonDown ("Fire3")) {
+			if (lockedRobot != null && lockedRobot.GetComponent<RobotSwap>()) {
+				Vector3 currentLocation = this.transform.position;
+				Vector3 robotLocation = lockedRobot.transform.position;
+
+				this.transform.position = robotLocation;
+				lockedRobot.transform.position = currentLocation;
+			}
+		}
 	}
 
 	IEnumerator drawLine() {

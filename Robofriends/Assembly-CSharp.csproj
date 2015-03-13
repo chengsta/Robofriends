@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\PlayerLockGun.cs" />
      <Compile Include="Assets\Scripts\Robot.cs" />
      <Compile Include="Assets\Scripts\RobotJump.cs" />
+     <Compile Include="Assets\Scripts\RobotSwap.cs" />
      <Compile Include="Assets\Scripts\Spikes.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
