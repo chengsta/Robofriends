@@ -10,17 +10,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial 1.unity
   - enabled: 1
-    path: Assets/Scenes/Tutorial 2.unity
-  - enabled: 1
     path: Assets/Scenes/Tutorial 3.unity
-  - enabled: 1
-    path: Assets/Scenes/Tutorial 4.unity
   - enabled: 1
     path: Assets/Scenes/Tutorial 5.unity
   - enabled: 1
     path: Assets/Scenes/Tutorial 6.unity
   - enabled: 1
+    path: Assets/Scenes/Tutorial 2.unity
+  - enabled: 1
     path: Assets/Scenes/Tutorial 7.unity
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 8.unity
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 4.unity
   - enabled: 1
     path: Assets/Scenes/Door.unity
   - enabled: 1

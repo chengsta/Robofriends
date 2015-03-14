@@ -41,4 +41,8 @@ public class Robot : MonoBehaviour {
 		transform.parent = null;
 		
 	}
+
+	public virtual void hitBySpikes() {
+		Destroy(this.gameObject);
+	}
 }
