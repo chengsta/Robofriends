@@ -21,14 +21,14 @@ public class Robot : MonoBehaviour {
 	
 	}
 
-	public void SetParent(GameObject go) {
+	public virtual void SetParent(GameObject go) {
 		Destroy(gameObject.rigidbody);
 		transform.parent = go.transform;
 
 		collider.material = frictionless;
 	}
 
-	public void ReleaseParent() {
+	public virtual void ReleaseParent() {
 
 		Rigidbody rb = gameObject.AddComponent<Rigidbody>() as Rigidbody;
 
