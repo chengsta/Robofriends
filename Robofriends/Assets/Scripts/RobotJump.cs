@@ -5,7 +5,7 @@ public class RobotJump : Robot {
 	private GroundChecker groundChecker;
 
 	// Use this for initialization
-	void Start () {
+	public virtual void Start () {
 		groundChecker  = GetComponent<GroundChecker>();
 	}
 	

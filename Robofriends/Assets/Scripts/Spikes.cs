@@ -14,10 +14,12 @@ public class Spikes : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider coll) {
-		print ("sdfksd");
-
+		Robot r;
 		if (coll.gameObject.GetComponent<Player>()) {
 			Application.LoadLevel (Application.loadedLevel);
+		}
+		else if (r = coll.gameObject.GetComponent<Robot>()) {
+			r.hitBySpikes();
 		}
 		
 	}
