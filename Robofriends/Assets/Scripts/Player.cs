@@ -64,7 +64,7 @@ public class Player : MonoBehaviour {
 		setHorizSpeed (Input.GetAxis("Horizontal") * moveSpeed);
 	}
 	
-	void OnTriggerEnter(Collider coll) {
+//	void OnTriggerEnter(Collider coll) {
 //		if (coll.GetComponent<LockSwitch>()) {
 //			lock_movement();
 //		}
@@ -77,6 +77,13 @@ public class Player : MonoBehaviour {
 //		else if (coll.GetComponent<SwapSwitch>()) {
 //			StartCoroutine("SwapCheck");
 //		}
+//	}
+
+	void OnTriggerStay(Collider coll) {
+		if (coll.GetComponent<GravityWell>()) {
+			Vector3 direction = new Vector3(0,0,coll.transform.rotation.z);
+			rigidbody.AddForce (coll.transform.up* 80.0f, ForceMode.Acceleration);
+		}
 	}
 
 	void OnTriggerExit(Collider coll) {
