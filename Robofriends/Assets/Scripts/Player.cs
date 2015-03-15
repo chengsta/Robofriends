@@ -106,6 +106,12 @@ public class Player : MonoBehaviour {
 			return canJump;
 	}
 	
+	public void ReleaseRobot () {
+		Robot r;
+		if (r = GetComponentInChildren<Robot> ()) {
+			r.GetComponent<Robot>().ReleaseParent();
+		}
+	}
 
 	void setHorizSpeed(float x) {
 		rigidbody.velocity = new Vector3(x, rigidbody.velocity.y, 0);

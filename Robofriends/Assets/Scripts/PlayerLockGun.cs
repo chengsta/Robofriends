@@ -68,20 +68,10 @@ public class PlayerLockGun : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Fire1")) {
-			Time.timeScale = Time.timeScale / slowdown;
-			Time.fixedDeltaTime = Time.fixedDeltaTime / slowdown;
-			StartCoroutine("fireGun");
+			LockRobot();
 		}
 		else if (Input.GetButtonDown("Fire2")) {
-			if (lockedRobot) {
-				lockedRobot.ReleaseParent();
-				lockedRobot = null;
-
-				//remove connection line
-				StopCoroutine("drawLine");
-				connection.SetPosition(0, Vector3.zero);
-				connection.SetPosition(1, Vector3.zero);
-			}
+			ReleaseRobot ();
 		}
 		else if (Input.GetButtonDown ("Fire3")) {
 			if (lockedRobot.GetComponent<RobotSwap>()) {
@@ -100,5 +90,22 @@ public class PlayerLockGun : MonoBehaviour {
 			connection.SetPosition(1, lockedRobot.transform.position);
 			yield return null;
 		}
+	}
+
+	public void ReleaseRobot () {
+		if (lockedRobot) {
+			lockedRobot.ReleaseParent ();
+			lockedRobot = null;
+			
+			//remove connection line
+			StopCoroutine ("drawLine");
+			connection.SetPosition (0, Vector3.zero);
+			connection.SetPosition (1, Vector3.zero);
+		}
+	}
+	public void LockRobot() {
+		Time.timeScale = Time.timeScale / slowdown;
+		Time.fixedDeltaTime = Time.fixedDeltaTime / slowdown;
+		StartCoroutine("fireGun");
 	}
 }

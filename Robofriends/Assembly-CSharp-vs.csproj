@@ -55,9 +55,12 @@
      <Compile Include="Assets\MDM_import\Scripts\SwapSwitch.cs" />
      <Compile Include="Assets\MDM_import\Scripts\UnlockSwitch.cs" />
      <Compile Include="Assets\Scripts\AirBot.cs" />
+     <Compile Include="Assets\Scripts\ConstantSpawner.cs" />
+     <Compile Include="Assets\Scripts\DC.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\DoorSwitch.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
+     <Compile Include="Assets\Scripts\GravityWell.cs" />
      <Compile Include="Assets\Scripts\GroundChecker.cs" />
      <Compile Include="Assets\Scripts\GunRotate.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
@@ -65,6 +68,7 @@
      <Compile Include="Assets\Scripts\PlayerLockGun.cs" />
      <Compile Include="Assets\Scripts\Robot.cs" />
      <Compile Include="Assets\Scripts\RobotJump.cs" />
+     <Compile Include="Assets\Scripts\RobotSwap.cs" />
      <Compile Include="Assets\Scripts\Spikes.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
