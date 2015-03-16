@@ -64,7 +64,7 @@ public class Player : MonoBehaviour {
 		setHorizSpeed (Input.GetAxis("Horizontal") * moveSpeed);
 	}
 	
-//	void OnTriggerEnter(Collider coll) {
+	void OnTriggerEnter(Collider coll) {
 //		if (coll.GetComponent<LockSwitch>()) {
 //			lock_movement();
 //		}
@@ -77,7 +77,11 @@ public class Player : MonoBehaviour {
 //		else if (coll.GetComponent<SwapSwitch>()) {
 //			StartCoroutine("SwapCheck");
 //		}
-//	}
+
+		if (coll.GetComponent<Bullet>()) {
+			Destroy (this.gameObject);
+		}
+	}
 
 	void OnTriggerStay(Collider coll) {
 		if (coll.GetComponent<GravityWell>()) {
