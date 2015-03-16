@@ -57,6 +57,13 @@ public class PlayerLockGun : MonoBehaviour {
 				}
 				r.SetParent(gameObject);
 				lockedRobot = r;
+
+				//activate enemy bots
+				RobotEnemy robot_enemy;
+				if (robot_enemy = lockedRobot.GetComponent<RobotEnemy>()) {
+					robot_enemy.activated = true;
+				}
+
 				connection.SetPosition(0, this.transform.position);
 				connection.SetPosition(1, r.transform.position);
 				StartCoroutine("drawLine");
@@ -94,6 +101,13 @@ public class PlayerLockGun : MonoBehaviour {
 
 	public void ReleaseRobot () {
 		if (lockedRobot) {
+
+			//check for enemy robot
+			RobotEnemy robot_enemy;
+			if (robot_enemy = lockedRobot.GetComponent<RobotEnemy>()) {
+				robot_enemy.activated = false;
+			}
+
 			lockedRobot.ReleaseParent ();
 			lockedRobot = null;
 			
