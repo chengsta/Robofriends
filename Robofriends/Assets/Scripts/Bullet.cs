@@ -11,7 +11,13 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter(Collider coll) {
 		print ("Bullet hit something");
 
-		if (coll.GetComponent<Player>() || coll.GetComponent<RobotEnemy>()) {
+		if (coll.GetComponent<RobotEnemy>()) {
+			//is there a better way to do this?
+			GameObject.Find("Player").GetComponent<PlayerLockGun>().ReleaseRobot();
+			Destroy(coll.gameObject);
+		}
+
+		if (coll.GetComponent<Player>()) {
 			Destroy(coll.gameObject);
 		}
 

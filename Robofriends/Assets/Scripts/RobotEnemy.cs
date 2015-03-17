@@ -6,10 +6,11 @@ public class RobotEnemy : Robot {
 	public bool controlled = false;
 	public float timer = 0;
 	public GameObject bullet;
-
-	private bool facing_left;
+	public bool facing_left;
 
 	void Start () {
+		collider.material = frictionless;
+		rigidbody.velocity = new Vector3(5, 0, 0);
 		StartCoroutine("scan");
 	}
 
@@ -73,5 +74,5 @@ public class RobotEnemy : Robot {
 		else {
 			if (timer != 0) timer = 0;
 		}
-	}
+	}	
 }
