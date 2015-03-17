@@ -2,24 +2,64 @@
 using System.Collections;
 
 public class RobotEnemy : Robot {
-	public bool activated;
+	public bool activated = false;
+	public bool controlled = false;
 	public float timer = 0;
 	public GameObject bullet;
 
-	void Update () {
+	private bool facing_left;
 
+	void Start () {
+		StartCoroutine("scan");
+	}
+
+	IEnumerator scan () {
+		while (true) {
+			RaycastHit hit = new RaycastHit();
+			int layerMask = LayerMask.GetMask("Player");
+
+			Vector3 raycast_direction;
+
+			if (facing_left) {
+				raycast_direction = Vector3.left;
+			}
+			else {
+				raycast_direction = Vector3.right;
+			}
+
+			if (Physics.Raycast (this.transform.position, raycast_direction, out hit, Mathf.Infinity, layerMask)) {
+				activated = true;
+			}
+
+			else {
+				activated = false;
+			}
+
+			yield return null;
+		}
 	}
 	
 	void FixedUpdate () {
-		if (activated) {
+		if (controlled || activated) {
 			if (timer == 0) {
 				//TODO: bullet shoots in right direction
 
 				Vector3 bullet_start = this.transform.position;
-				bullet_start.x += 1.5f;
+				if (facing_left) {
+					bullet_start.x -= 1.5f;
+				}
+				else {
+					bullet_start.x += 1.5f;
+				}
 
 				GameObject go = Instantiate (bullet, bullet_start, Quaternion.identity) as GameObject;
-				go.rigidbody.AddForce (Vector3.right * 750);
+
+				if (facing_left) {
+					go.rigidbody.AddForce (Vector3.left * 750);
+				}
+				else {
+					go.rigidbody.AddForce (Vector3.right * 750);
+				}
 			
 				timer += Time.fixedDeltaTime;
 			}
@@ -34,11 +74,4 @@ public class RobotEnemy : Robot {
 			if (timer != 0) timer = 0;
 		}
 	}
-
-	void OnTriggerEnter(Collider coll) {
-		if (coll.GetComponent<Bullet>()) {
-			Destroy (this.gameObject);
-		}
-	}
-
 }

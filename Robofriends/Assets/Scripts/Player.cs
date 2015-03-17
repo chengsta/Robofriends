@@ -78,9 +78,9 @@ public class Player : MonoBehaviour {
 //			StartCoroutine("SwapCheck");
 //		}
 
-		if (coll.GetComponent<Bullet>()) {
-			Destroy (this.gameObject);
-		}
+//		if (coll.GetComponent<Bullet>()) {
+//			Destroy (this.gameObject);
+//		}
 	}
 
 	void OnTriggerStay(Collider coll) {

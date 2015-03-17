@@ -8,8 +8,13 @@ public class Bullet : MonoBehaviour {
 		StartCoroutine("timer");
 	}
 
-	void OnTriggerEnter() {
+	void OnTriggerEnter(Collider coll) {
 		print ("Bullet hit something");
+
+		if (coll.GetComponent<Player>() || coll.GetComponent<RobotEnemy>()) {
+			Destroy(coll.gameObject);
+		}
+
 		Destroy (this.gameObject);
 	}
 
