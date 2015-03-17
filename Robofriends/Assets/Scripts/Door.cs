@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Door : MonoBehaviour {
+	public bool default_closed = true;
+
 	public bool open;
 	public int DistanceToMove = 5;
 	private float finalPosition;
@@ -17,19 +19,47 @@ public class Door : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (open && !opened) {
-			//transform.position = new Vector3(transform.position.x, transform.position.y + 2.0f, transform.position.z);
-			transform.position = transform.position + transform.up;
-			count++;
-		}
-		if (!open && opened) {
-			//transform.position = new Vector3(transform.position.x, transform.position.y - 2.0f, transform.position.z);
-			transform.position = transform.position - transform.up;
-			count++;
-		}
-		if (count == DistanceToMove) {
-			opened = !opened;
-			count = 0;
-		}
+		//Currently we will use the appear/disappear method
+
+
+
+
+//		if (open && !opened) {
+//			//transform.position = new Vector3(transform.position.x, transform.position.y + 2.0f, transform.position.z);
+//			transform.position = transform.position + transform.up;
+//			count++;
+//		}
+//		if (!open && opened) {
+//			//transform.position = new Vector3(transform.position.x, transform.position.y - 2.0f, transform.position.z);
+//			transform.position = transform.position - transform.up;
+//			count++;
+//		}
+//		if (count == DistanceToMove) {
+//			opened = !opened;
+//			count = 0;
+//		}
 	}
-}
+
+	public void Activate() {
+		if (default_closed)
+			Open ();
+		else
+			Close ();
+	}
+
+	public void Deactivate() {
+		if (default_closed)
+			Close ();
+		else
+			Open ();
+	}
+
+
+	private void Open() {
+		gameObject.SetActive(false);
+	}
+
+	private void Close() {
+		gameObject.SetActive(true);
+	}
+ }
