@@ -84,10 +84,10 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider coll) {
-		if (coll.GetComponent<GravityWell>()) {
-			Vector3 direction = new Vector3(0,0,coll.transform.rotation.z);
-			rigidbody.AddForce (coll.transform.up* 80.0f, ForceMode.Acceleration);
-		}
+//		if (coll.GetComponent<GravityWell>()) {
+//			Vector3 direction = new Vector3(0,0,coll.transform.rotation.z);
+//			rigidbody.AddForce (coll.transform.up* 80.0f, ForceMode.Acceleration);
+//		}
 	}
 
 	void OnTriggerExit(Collider coll) {
