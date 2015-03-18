@@ -24,20 +24,20 @@ public class Door : MonoBehaviour {
 
 
 
-//		if (open && !opened) {
-//			//transform.position = new Vector3(transform.position.x, transform.position.y + 2.0f, transform.position.z);
-//			transform.position = transform.position + transform.up;
-//			count++;
-//		}
-//		if (!open && opened) {
-//			//transform.position = new Vector3(transform.position.x, transform.position.y - 2.0f, transform.position.z);
-//			transform.position = transform.position - transform.up;
-//			count++;
-//		}
-//		if (count == DistanceToMove) {
-//			opened = !opened;
-//			count = 0;
-//		}
+		if (open && !opened) {
+			//transform.position = new Vector3(transform.position.x, transform.position.y + 2.0f, transform.position.z);
+			transform.position = transform.position + transform.up;
+			count++;
+		}
+		if (!open && opened) {
+			//transform.position = new Vector3(transform.position.x, transform.position.y - 2.0f, transform.position.z);
+			transform.position = transform.position - transform.up;
+			count++;
+		}
+		if (count == DistanceToMove) {
+			opened = !opened;
+			count = 0;
+		}
 	}
 
 	public void Activate() {
@@ -56,10 +56,12 @@ public class Door : MonoBehaviour {
 
 
 	private void Open() {
-		gameObject.SetActive(false);
+		//gameObject.SetActive(false);
+		open = true;
 	}
 
 	private void Close() {
-		gameObject.SetActive(true);
+		//gameObject.SetActive(true);
+		open = false;
 	}
  }
