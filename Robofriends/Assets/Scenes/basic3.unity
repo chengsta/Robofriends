@@ -864,9 +864,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: 'I don''t always want to move,
-
-        but when I do I use WASD'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1422,7 +1420,7 @@ GameObject:
   - 65: {fileID: 1739833251}
   - 23: {fileID: 1739833250}
   - 114: {fileID: 1739833249}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Gravity Well
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1441,7 +1439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e2e7f50a6cd314f9b7f5c1502fe46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceMultiplier: 1
+  maxSpeed: 15.71
+  Force: 81.5400009
+  direction: 0
 --- !u!23 &1739833250
 Renderer:
   m_ObjectHideFlags: 0
@@ -1847,9 +1847,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'I don''t always want to move,
-
-    but when I do I use WASD'
+  m_Text: 
 --- !u!222 &2045937637
 CanvasRenderer:
   m_ObjectHideFlags: 0
