@@ -1663,6 +1663,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11473548, guid: a6ef9b98264061c43bb1ac34cfb023cc, type: 2}
+      propertyPath: maxSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473548, guid: a6ef9b98264061c43bb1ac34cfb023cc, type: 2}
+      propertyPath: Force
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6ef9b98264061c43bb1ac34cfb023cc, type: 2}
   m_RootGameObject: {fileID: 1331819432}
@@ -2147,8 +2155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e2e7f50a6cd314f9b7f5c1502fe46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 15.71
-  Force: 81.5400009
+  maxSpeed: 30
+  Force: 100
   direction: 0
 --- !u!23 &1331819435
 Renderer:
