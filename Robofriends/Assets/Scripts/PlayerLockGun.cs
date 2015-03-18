@@ -96,6 +96,11 @@ public class PlayerLockGun : MonoBehaviour {
 			connection.SetPosition(0, this.transform.position);
 			connection.SetPosition(1, lockedRobot.transform.position);
 			yield return null;
+
+			if (lockedRobot == null) {
+				connection.SetPosition (0, Vector3.zero);
+				connection.SetPosition (1, Vector3.zero);
+			} 
 		}
 	}
 
