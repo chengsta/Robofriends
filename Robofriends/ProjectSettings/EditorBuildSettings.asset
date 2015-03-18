@@ -63,5 +63,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Josh 1.unity
   - enabled: 1
     path: Assets/Scenes/Phil 2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main_menu.unity
