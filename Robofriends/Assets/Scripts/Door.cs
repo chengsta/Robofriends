@@ -9,7 +9,7 @@ public class Door : MonoBehaviour {
 	private float finalPosition;
 	private float initialPosition;
 	public float timer;
-	private bool opened;
+	public bool opened;
 	private int count;
 	// Use this for initialization
 	void Start () {
@@ -24,20 +24,20 @@ public class Door : MonoBehaviour {
 
 
 
-		if (open && !opened) {
+		if (open && count < DistanceToMove) {
 			//transform.position = new Vector3(transform.position.x, transform.position.y + 2.0f, transform.position.z);
 			transform.position = transform.position + transform.up;
 			count++;
 		}
-		if (!open && opened) {
+
+		if (!open && count > 0) {
 			//transform.position = new Vector3(transform.position.x, transform.position.y - 2.0f, transform.position.z);
 			transform.position = transform.position - transform.up;
-			count++;
+			count--;
 		}
-		if (count == DistanceToMove) {
-			opened = !opened;
-			count = 0;
-		}
+		//if (count == DistanceToMove || count == 0) {
+		//	opened = !opened;
+		//}
 	}
 
 	public void Activate() {
