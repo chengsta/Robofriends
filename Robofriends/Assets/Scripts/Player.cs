@@ -7,8 +7,12 @@ public class Player : MonoBehaviour {
 	public float jumpTime;
 	bool jumping = false;
 	public float gravity;
+	public Animator anim;
+	public Camera camera;
 
 	private GroundChecker groundChecker;
+	private GameObject SpriteChild;
+	private GameObject Gun;
 
 	private float timer;
 	IEnumerator Jump() {
@@ -32,12 +36,38 @@ public class Player : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		Gun = transform.Find ("Gun").gameObject;
+		SpriteChild = transform.Find ("PlayerSprite").gameObject;
 		groundChecker = GetComponent<GroundChecker>();
+		anim = this.GetComponentInChildren<Animator>();
+		camera = Camera.main;
 //		Camera.main.GetComponent<LockController> ().players.Add (gameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		float h = Input.GetAxis ("Horizontal");
+		if (!groundChecker.IsGrounded ()) {	
+			anim.Play ("PlayerJump");
+		} else if (rigidbody.velocity.x == 0) {
+			anim.Play ("PlayerStand");
+		} else {			
+			anim.Play ("PlayerWalk");
+		}
+
+		Vector3 temp = SpriteChild.transform.localScale;
+		Vector3 gunTemp= Gun.transform.localScale;
+		Vector3 charPos = camera.WorldToScreenPoint (transform.position);
+
+		if (Input.mousePosition.x < charPos.x && temp.x > 0) {
+			gunTemp.y *= -1;
+			temp.x *= -1;
+		} else if (Input.mousePosition.x > charPos.x && temp.x < 0) {
+			temp.x *= -1;
+			gunTemp.y *= -1;
+		}
+		SpriteChild.transform.localScale = temp;
+		Gun.transform.localScale = gunTemp;
 		
 		//menu stuff, maybe move later
 //		if (Input.GetButtonDown("Restart")) {
@@ -54,14 +84,13 @@ public class Player : MonoBehaviour {
 		
 		if (Input.GetButtonDown("Jump")) {
 			if (CanJump()) {
-				
 				timer = jumpTime;
 				StartCoroutine("Jump");
 				setVertSpeed(jumpSpeed);
 			}
 		}
 		
-		setHorizSpeed (Input.GetAxis("Horizontal") * moveSpeed);
+		setHorizSpeed (h * moveSpeed);
 	}
 	
 	void OnTriggerEnter(Collider coll) {
