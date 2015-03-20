@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
 	private GroundChecker groundChecker;
 	private GameObject SpriteChild;
 	private GameObject Gun;
+	private GameObject GunSpriteChild;
 
 	private float timer;
 	IEnumerator Jump() {
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Gun = transform.Find ("Gun").gameObject;
+		GunSpriteChild = Gun.transform.Find("GunSprite").gameObject;
 		SpriteChild = transform.Find ("PlayerSprite").gameObject;
 		groundChecker = GetComponent<GroundChecker>();
 		anim = this.GetComponentInChildren<Animator>();
@@ -56,7 +58,7 @@ public class Player : MonoBehaviour {
 		}
 
 		Vector3 temp = SpriteChild.transform.localScale;
-		Vector3 gunTemp= Gun.transform.localScale;
+		Vector3 gunTemp= GunSpriteChild.transform.localScale;
 		Vector3 charPos = camera.WorldToScreenPoint (transform.position);
 
 		if (Input.mousePosition.x < charPos.x && temp.x > 0) {
@@ -67,7 +69,7 @@ public class Player : MonoBehaviour {
 			gunTemp.y *= -1;
 		}
 		SpriteChild.transform.localScale = temp;
-		Gun.transform.localScale = gunTemp;
+		GunSpriteChild.transform.localScale = gunTemp;
 		
 		//menu stuff, maybe move later
 //		if (Input.GetButtonDown("Restart")) {
