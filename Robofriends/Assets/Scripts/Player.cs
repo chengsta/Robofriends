@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
 	private GroundChecker groundChecker;
 	private GameObject SpriteChild;
 	private GameObject Gun;
-	private FixedJoint PlayerJoint;
+	//private FixedJoint PlayerJoint;
 	private GameObject GunSpriteChild;
 
 	private float timer;
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour {
 		Gun = transform.Find ("Gun").gameObject;
 		GunSpriteChild = Gun.transform.Find("GunSprite").gameObject;
 		SpriteChild = transform.Find ("PlayerSprite").gameObject;
-		PlayerJoint = GetComponent<FixedJoint> ();
+		//PlayerJoint = GetComponent<FixedJoint> ();
 		groundChecker = GetComponent<GroundChecker>();
 		anim = this.GetComponentInChildren<Animator>();
 		camera = Camera.main;
