@@ -9,8 +9,8 @@ public class RobotEnemy : Robot {
 	public bool facing_left;
 
 	void Start () {
-		collider.material = frictionless;
-		rigidbody.velocity = new Vector3(5, 0, 0);
+		GetComponent<Collider>().material = frictionless;
+		GetComponent<Rigidbody>().velocity = new Vector3(5, 0, 0);
 		StartCoroutine("scan");
 	}
 
@@ -56,10 +56,10 @@ public class RobotEnemy : Robot {
 				GameObject go = Instantiate (bullet, bullet_start, Quaternion.identity) as GameObject;
 
 				if (facing_left) {
-					go.rigidbody.AddForce (Vector3.left * 750);
+					go.GetComponent<Rigidbody>().AddForce (Vector3.left * 750);
 				}
 				else {
-					go.rigidbody.AddForce (Vector3.right * 750);
+					go.GetComponent<Rigidbody>().AddForce (Vector3.right * 750);
 				}
 			
 				timer += Time.fixedDeltaTime;

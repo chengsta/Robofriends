@@ -18,10 +18,10 @@ public class EnemyStopper : MonoBehaviour {
 
 		if (re = coll.GetComponent<RobotEnemy>()) {
 			print ("stopper hit");
-			Vector3 temp = coll.rigidbody.velocity;
+			Vector3 temp = coll.GetComponent<Rigidbody>().velocity;
 			temp.x *= -1;
 			re.facing_left = !re.facing_left;
-			coll.rigidbody.velocity = temp;
+			coll.GetComponent<Rigidbody>().velocity = temp;
 		}
 	}
 }

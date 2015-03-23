@@ -6,8 +6,8 @@ public class GroundChecker : MonoBehaviour {
 	private Vector3 width;
 	// Use this for initialization
 	void Start () {
-		distToGround = collider.bounds.extents.y;
-		width = new Vector3(collider.bounds.extents.x, 0, 0);
+		distToGround = GetComponent<Collider>().bounds.extents.y;
+		width = new Vector3(GetComponent<Collider>().bounds.extents.x, 0, 0);
 	}
 	
 	// Update is called once per frame
