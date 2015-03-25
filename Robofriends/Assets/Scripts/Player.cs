@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
 	public Animator anim;
 	public Camera camera;
 
+
 	private GroundChecker groundChecker;
 	private GameObject SpriteChild;
 	private GameObject Gun;
@@ -76,19 +77,6 @@ public class Player : MonoBehaviour {
 		SpriteChild.transform.localScale = temp;
 		GunSpriteChild.transform.localScale = gunTemp;
 		
-		//menu stuff, maybe move later
-//		if (Input.GetButtonDown("Restart")) {
-//			Physics.gravity = new Vector3(0, -40.0f, 0);
-//			Application.LoadLevel(Application.loadedLevelName);
-//		}
-//		
-//		if (Input.GetButtonDown("Cancel")) {
-//			Application.LoadLevel("Main_menu");
-//		}
-		
-		
-		//gravity = Physics.gravity.y;
-		
 		if (Input.GetButtonDown("Jump")) {
 			if (CanJump()) {
 				timer = jumpTime;
@@ -98,6 +86,7 @@ public class Player : MonoBehaviour {
 		}
 		
 		setHorizSpeed (h * moveSpeed);
+
 	}
 	
 	void OnTriggerEnter(Collider coll) {
@@ -168,7 +157,8 @@ public class Player : MonoBehaviour {
 	void unlock_movement() {
 		Camera.main.GetComponent<LockController> ().unlock_movement ();
 	}
-	
+
+
 //	public void reverse_gravity() {
 //		StopCoroutine("Jump");
 //		gravity = -gravity;
