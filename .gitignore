@@ -67,3 +67,5 @@ $RECYCLE.BIN/
 Robofriends/Robofriends-csharp.sln
 *.sln
 *.userprefs
+*.unityproj
+*.csproj

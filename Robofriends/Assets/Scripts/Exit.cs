@@ -37,7 +37,7 @@ public class Exit : MonoBehaviour {
 		Vector3 endPos = new Vector3(startPos.x, startPos.y + teleportAnimHeight, startPos.z);
 
 		player.GetComponent<Player>().enabled = false;
-		player.FindChild("Beam").gameObject.SetActive(true);
+		//player.FindChild("Beam").gameObject.SetActive(true);
 		
 		while (TeleportTimer > 0) {
 			float lerpPercent = 1 - (TeleportTimer / teleportAnimTime);
