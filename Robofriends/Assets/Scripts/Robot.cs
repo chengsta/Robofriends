@@ -26,6 +26,7 @@ public class Robot : MonoBehaviour {
 	public virtual void SetParent(GameObject go) {
 		Vector3 _posRobot = transform.position;
 		Vector3 _posGo = go.transform.position;
+
 		Destroy(gameObject.GetComponent<Rigidbody>());
 		transform.parent = go.transform;
 
