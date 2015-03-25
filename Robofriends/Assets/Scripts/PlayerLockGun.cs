@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using VolumetricLines;
 
 public class PlayerLockGun : MonoBehaviour {
 	public float slowdown;
 	private Robot lockedRobot;
 	public float maxShootDistance;
-	private LineRenderer connection;	
+	public float shootTime;
+
+	//private LineRenderer connection;
+	private VolumetricLineBehavior volConnection;
 
 	// Use this for initialization
 	void Start () {
-		connection = transform.FindChild("Gun").GetComponentInChildren<LineRenderer>();
+		//connection = transform.FindChild("Gun").GetComponentInChildren<LineRenderer>();
+		volConnection = transform.FindChild("Connector").GetComponent<VolumetricLineBehavior>();
 	}
 
 	IEnumerator fireGun() {
@@ -64,9 +69,9 @@ public class PlayerLockGun : MonoBehaviour {
 					robot_enemy.controlled = true;
 				}
 
-				connection.SetPosition(0, this.transform.position);
-				connection.SetPosition(1, r.transform.position);
-				StartCoroutine("drawLine");
+				//connection.SetPosition(0, this.transform.position);
+				//connection.SetPosition(1, r.transform.position);
+				StartCoroutine("shootLine");
 			}
 		}
 	}
@@ -91,15 +96,41 @@ public class PlayerLockGun : MonoBehaviour {
 		}
 	}
 
+	IEnumerator shootLine() {
+		float timer = shootTime;
+
+		while (timer > 0) {
+			float lerpPercent = 1 - (timer / shootTime);
+			lerpPercent = lerpPercent * lerpPercent;
+
+			volConnection.m_startPos = Vector3.zero;
+			
+			Vector3 endPos = Vector3.Lerp(Vector3.zero, lockedRobot.transform.position - transform.position, lerpPercent);
+			volConnection.m_endPos = endPos;
+			
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+
+		StartCoroutine("drawLine");
+	}
+
 	IEnumerator drawLine() {
 		while(lockedRobot) {
-			connection.SetPosition(0, this.transform.position);
-			connection.SetPosition(1, lockedRobot.transform.position);
+			volConnection.m_startPos = Vector3.zero;
+			volConnection.m_endPos = lockedRobot.transform.position - transform.position;
+
+
+			//connection.SetPosition(0, this.transform.position);
+			//connection.SetPosition(1, lockedRobot.transform.position);
 			yield return null;
 
 			if (lockedRobot == null) {
-				connection.SetPosition (0, Vector3.zero);
-				connection.SetPosition (1, Vector3.zero);
+				volConnection.m_startPos = Vector3.zero;
+				volConnection.m_endPos = Vector3.zero;
+
+				//connection.SetPosition (0, Vector3.zero);
+				//connection.SetPosition (1, Vector3.zero);
 			} 
 		}
 	}
@@ -117,9 +148,13 @@ public class PlayerLockGun : MonoBehaviour {
 			lockedRobot = null;
 			
 			//remove connection line
+			StopCoroutine("shootLine");
 			StopCoroutine ("drawLine");
-			connection.SetPosition (0, Vector3.zero);
-			connection.SetPosition (1, Vector3.zero);
+			//connection.SetPosition (0, Vector3.zero);
+			//connection.SetPosition (1, Vector3.zero);
+
+			volConnection.m_startPos = Vector3.zero;
+			volConnection.m_endPos = Vector3.zero;
 		}
 	}
 	public void LockRobot() {
