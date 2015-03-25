@@ -13,19 +13,27 @@ public class Robot : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigidbody = gameObject.GetComponent<Rigidbody>();
-		collider.material = friction;
+		GetComponent<Collider>().material = friction;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (transform.rotation != Quaternion.identity) {
+			transform.rotation = Quaternion.identity;
+		}
 	}
 
 	public virtual void SetParent(GameObject go) {
-		Destroy(gameObject.rigidbody);
+		Vector3 _posRobot = transform.position;
+		Vector3 _posGo = go.transform.position;
+		Destroy(gameObject.GetComponent<Rigidbody>());
 		transform.parent = go.transform;
 
-		collider.material = frictionless;
+		GetComponent<Collider>().material = frictionless;
+		transform.position = _posRobot;
+		go.transform.position = _posGo;
+		go.transform.rotation = Quaternion.identity;
+		transform.rotation = Quaternion.identity;
 	}
 
 	public virtual void ReleaseParent() {
@@ -35,8 +43,8 @@ public class Robot : MonoBehaviour {
 		rb.freezeRotation = true;
 		rb.constraints = rb.constraints | RigidbodyConstraints.FreezePositionZ;
 
-		rb.velocity = transform.parent.rigidbody.velocity;
-		collider.material = friction;
+		rb.velocity = transform.parent.GetComponent<Rigidbody>().velocity;
+		GetComponent<Collider>().material = friction;
 
 		transform.parent = null;
 		
@@ -45,4 +53,5 @@ public class Robot : MonoBehaviour {
 	public virtual void hitBySpikes() {
 		Destroy(this.gameObject);
 	}
+
 }

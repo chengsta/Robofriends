@@ -54,13 +54,13 @@ public class GravityWell : MonoBehaviour {
 	void OnTriggerStay(Collider coll) {
 		Rigidbody rb = null;
 		if (coll.gameObject.GetComponent<Player>()) {
-			rb = coll.rigidbody;
+			rb = coll.GetComponent<Rigidbody>();
 		}
 		else if (coll.gameObject.GetComponent<Robot>()) {
 			if (coll.GetComponentInParent<Player>())
-				rb = coll.transform.parent.rigidbody;
+				rb = coll.transform.parent.GetComponent<Rigidbody>();
 			else
-				rb = coll.rigidbody;
+				rb = coll.GetComponent<Rigidbody>();
 		}
 		else {
 			print ("error, GravityWell.cs OnTriggerEnter()");

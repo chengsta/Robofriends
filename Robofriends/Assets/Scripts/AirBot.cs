@@ -12,7 +12,7 @@ public class AirBot : Robot {
 	void Start () {
 		player = null;
 		center = transform.position;
-		collider.material = friction;
+		GetComponent<Collider>().material = friction;
 	}
 	
 	// Update is called once per frame
@@ -20,16 +20,16 @@ public class AirBot : Robot {
 		if (Mathf.Abs(transform.position.x - center.x) > movementWidth)
 			speed *= -1f;
 		if (movementWidth != 0)
-			rigidbody.MovePosition(transform.position + transform.right * speed * Time.deltaTime);
+			GetComponent<Rigidbody>().MovePosition(transform.position + transform.right * speed * Time.deltaTime);
 
 
 	}
 
 	public override void SetParent(GameObject go) {
 		tetherLength = Vector3.Distance (go.transform.position, transform.position);
-		transform.gameObject.GetComponent<HingeJoint> ().connectedBody = go.rigidbody;
+		transform.gameObject.GetComponent<HingeJoint> ().connectedBody = go.GetComponent<Rigidbody>();
 		player = go;
-		collider.material = frictionless;
+		GetComponent<Collider>().material = frictionless;
 	}
 	
 	public override void ReleaseParent() {

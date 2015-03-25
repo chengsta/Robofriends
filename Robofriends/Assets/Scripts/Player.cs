@@ -50,10 +50,13 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (transform.rotation != Quaternion.identity) {
+			transform.rotation = Quaternion.identity;
+		}
 		float h = Input.GetAxis ("Horizontal");
 		if (!groundChecker.IsGrounded ()) {	
 			anim.Play ("PlayerJump");
-		} else if (rigidbody.velocity.x == 0) {
+		} else if (GetComponent<Rigidbody>().velocity.x == 0) {
 			anim.Play ("PlayerStand");
 		} else {			
 			anim.Play ("PlayerWalk");
@@ -151,11 +154,11 @@ public class Player : MonoBehaviour {
 	}
 
 	void setHorizSpeed(float x) {
-		rigidbody.velocity = new Vector3(x, rigidbody.velocity.y, 0);
+		GetComponent<Rigidbody>().velocity = new Vector3(x, GetComponent<Rigidbody>().velocity.y, 0);
 	}
 	
 	void setVertSpeed(float y) {
-		rigidbody.velocity = new Vector3(rigidbody.velocity.x, y, 0);
+		GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, y, 0);
 	}
 	
 	void lock_movement() {

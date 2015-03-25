@@ -50,7 +50,7 @@ public class LockController : MonoBehaviour {
 	void setColor(Material mat) {
 		Cube[] cubes = players [0].GetComponentsInChildren<Cube> () as Cube[];
 		foreach(Cube cube in cubes) {
-			cube.renderer.material = mat;
+			cube.GetComponent<Renderer>().material = mat;
 		}
 	}
 
