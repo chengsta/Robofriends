@@ -8,6 +8,9 @@ public class PlayerLockGun : MonoBehaviour {
 	public float maxShootDistance;
 	public float shootTime;
 
+	//for gravity flipping
+	private IEnumerator gravCoroutine;
+
 	//private LineRenderer connection;
 	private VolumetricLineBehavior volConnection;
 
@@ -64,9 +67,15 @@ public class PlayerLockGun : MonoBehaviour {
 				lockedRobot = r;
 
 				//activate enemy bots
-				RobotEnemy robot_enemy;
-				if (robot_enemy = lockedRobot.GetComponent<RobotEnemy>()) {
-					robot_enemy.controlled = true;
+//				RobotEnemy robot_enemy;
+//				if (robot_enemy = lockedRobot.GetComponent<RobotEnemy>()) {
+//					robot_enemy.controlled = true;
+//				}
+
+				RobotGrav robot_grav;
+				if (robot_grav = lockedRobot.GetComponent<RobotGrav>()) {
+					gravCoroutine = robot_grav.ReverseGrav();
+					StartCoroutine(gravCoroutine);
 				}
 
 				//connection.SetPosition(0, this.transform.position);
@@ -139,14 +148,25 @@ public class PlayerLockGun : MonoBehaviour {
 		if (lockedRobot) {
 
 			//check for enemy robot
-			RobotEnemy robot_enemy;
-			if (robot_enemy = lockedRobot.GetComponent<RobotEnemy>()) {
-				robot_enemy.controlled = false;
+//			RobotEnemy robot_enemy;
+//			if (robot_enemy = lockedRobot.GetComponent<RobotEnemy>()) {
+//				robot_enemy.controlled = false;
+//			}
+
+			RobotGrav robot_grav;
+			if (robot_grav = lockedRobot.GetComponent<RobotGrav>()) {
+				StopCoroutine(gravCoroutine);
 			}
 
-			lockedRobot.ReleaseParent ();
+			lockedRobot.ReleaseParent();
+
+			if (robot_grav) {
+				this.GetComponent<Rigidbody>().useGravity = true;
+				lockedRobot.GetComponent<Rigidbody>().useGravity = true;
+			}
+
 			lockedRobot = null;
-			
+
 			//remove connection line
 			StopCoroutine("shootLine");
 			StopCoroutine ("drawLine");
@@ -161,5 +181,6 @@ public class PlayerLockGun : MonoBehaviour {
 		Time.timeScale = Time.timeScale / slowdown;
 		Time.fixedDeltaTime = Time.fixedDeltaTime / slowdown;
 		StartCoroutine("fireGun");
+
 	}
 }
