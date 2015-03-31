@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\PlayerLockGun.cs" />
      <Compile Include="Assets\Scripts\Robot.cs" />
      <Compile Include="Assets\Scripts\RobotEnemy.cs" />
+     <Compile Include="Assets\Scripts\RobotGrav.cs" />
      <Compile Include="Assets\Scripts\RobotJump.cs" />
      <Compile Include="Assets\Scripts\RobotSwap.cs" />
      <Compile Include="Assets\Scripts\Spikes.cs" />

@@ -651,7 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowdown: 5
   maxShootDistance: 100
-  shootTime: .300000012
+  shootTime: .150000006
 --- !u!120 &12022266
 LineRenderer:
   m_ObjectHideFlags: 1

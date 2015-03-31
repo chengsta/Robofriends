@@ -5,24 +5,28 @@ public class DoorSwitch : MonoBehaviour {
 	public GameObject door;
 	public float initialPos;
 	public float finalPos;
+
+	private Transform sprite;
+
 	// Use this for initialization
 	void Start () {
 		initialPos = transform.position.y;
-		finalPos = transform.position.y - 0.4f;
+		finalPos = transform.position.y - 0.2f;
+		sprite = transform.FindChild("Sprite");
 	}
 	
 
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.name != "Platform") {
 			door.GetComponent<Door>().Activate ();
-			transform.position = new Vector3(transform.position.x, finalPos, transform.position.z);
+			sprite.position = new Vector3(sprite.position.x, finalPos, sprite.position.z);
 		}
 	}
 
 	void OnTriggerExit(Collider other) {
 		if (other.gameObject.name != "Platform") {
 			door.GetComponent<Door>().Deactivate ();
-			transform.position = new Vector3(transform.position.x, initialPos, transform.position.z);
+			sprite.position = new Vector3(sprite.position.x, initialPos, sprite.position.z);
 		}
 	}
 }
