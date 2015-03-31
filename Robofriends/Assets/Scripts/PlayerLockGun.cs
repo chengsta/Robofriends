@@ -85,7 +85,7 @@ public class PlayerLockGun : MonoBehaviour {
 		else if (Input.GetButtonDown("Fire2")) {
 			ReleaseRobot ();
 		}
-		else if (Input.GetButtonDown ("Fire3")) {
+		else if (Input.GetButtonDown ("Action")) {
 			if (lockedRobot.GetComponent<RobotSwap>()) {
 				Vector3 currentLocation = this.transform.position;
 				Vector3 robotLocation = lockedRobot.transform.position;
