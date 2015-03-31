@@ -1086,10 +1086,6 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 2058486195}
-    - target: {fileID: 21223142, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
   m_IsPrefabParent: 0
