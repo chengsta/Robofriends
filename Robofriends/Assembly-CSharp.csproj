@@ -64,6 +64,9 @@
      <Compile Include="Assets\Scripts\EnemyStopper.cs" />
      <Compile Include="Assets\Scripts\Entrance.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
+     <Compile Include="Assets\Scripts\FinalLevel\LavaTrigger.cs" />
+     <Compile Include="Assets\Scripts\FinalLevel\RisingLava.cs" />
+     <Compile Include="Assets\Scripts\FinalLevel\VerticalCameraFollow.cs" />
      <Compile Include="Assets\Scripts\GravityWell.cs" />
      <Compile Include="Assets\Scripts\GroundChecker.cs" />
      <Compile Include="Assets\Scripts\GunRotate.cs" />
