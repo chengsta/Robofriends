@@ -720,7 +720,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11487372, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
       propertyPath: nextLevel
-      value: Stage 16 - Gravity
+      value: Stage 16 - SwitchClimb
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
@@ -1424,7 +1424,7 @@ Transform:
   m_Children:
   - {fileID: 372686527}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &1831368148
 GameObject:
   m_ObjectHideFlags: 0

@@ -269,7 +269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437148, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: 'Stage 20
+      value: 'Stage 21
 
 '
       objectReference: {fileID: 0}
@@ -796,7 +796,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11487372, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
       propertyPath: nextLevel
-      value: Stage 21 - Swap
+      value: Stage 22 - Gravbot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
@@ -2053,6 +2053,10 @@ Prefab:
     - target: {fileID: 481026, guid: bf715a3bab08ce548a163d6dd2664240, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 481026, guid: bf715a3bab08ce548a163d6dd2664240, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 10.2812433
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf715a3bab08ce548a163d6dd2664240, type: 2}

@@ -441,7 +441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11487372, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
       propertyPath: nextLevel
-      value: Stage 18 - Gravity2
+      value: Stage 19 - Gravity2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
@@ -677,7 +677,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437148, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: Stage 17
+      value: Stage 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
