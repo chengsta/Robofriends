@@ -61,7 +61,7 @@ public class PlayerLockGun : MonoBehaviour {
 			Robot r;
 			if (r = hit.collider.gameObject.GetComponent<Robot>()) {
 				if (lockedRobot) {
-					lockedRobot.ReleaseParent();
+					ReleaseRobot();
 				}
 				r.SetParent(gameObject);
 				lockedRobot = r;
