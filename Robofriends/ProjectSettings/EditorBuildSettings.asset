@@ -75,3 +75,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage 23 - Gravbot1.unity
   - enabled: 1
     path: Assets/Scenes/Stage 25 - Swap4.unity
+  - enabled: 1
+    path: Assets/Scenes/Stage Final.unity
+  - enabled: 1
+    path: Assets/Scenes/Exit Stage.unity
+  - enabled: 1
+    path: Assets/Scenes/Thanks!.unity
