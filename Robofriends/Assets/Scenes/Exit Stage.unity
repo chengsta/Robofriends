@@ -240,7 +240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &94753635
 Prefab:
   m_ObjectHideFlags: 0
@@ -484,7 +484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeleportColorStart: {r: .572413683, g: 1, b: 0, a: 0}
   TeleportColorEnd: {r: .572549045, g: 1, b: 0, a: 0}
-  nextLevel: Phil 2
+  EndLevel: {fileID: 0}
+  nextLevel: Thanks!
 --- !u!212 &291979689
 SpriteRenderer:
   m_ObjectHideFlags: 0
