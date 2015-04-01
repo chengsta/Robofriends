@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   friction: {fileID: 13400000, guid: 7cf8b13725aec4e408dfd7e6d7e02200, type: 2}
   frictionless: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
-  up_force: 40
+  up_force: 30
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
