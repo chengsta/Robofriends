@@ -352,7 +352,7 @@ Transform:
   m_LocalScale: {x: 1.19999981, y: .812499762, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!1001 &134700502
 Prefab:
   m_ObjectHideFlags: 0
@@ -453,7 +453,7 @@ Transform:
   m_LocalScale: {x: 1, y: .812499762, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &181841103
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +681,7 @@ Transform:
   m_LocalScale: {x: 1, y: .812499762, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
 --- !u!4 &818251652
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
@@ -903,7 +903,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490054, guid: bbd04897bdc3846e69855b54fe40ef14, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 490054, guid: bbd04897bdc3846e69855b54fe40ef14, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.10000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 490054, guid: bbd04897bdc3846e69855b54fe40ef14, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbd04897bdc3846e69855b54fe40ef14, type: 2}
@@ -1341,7 +1349,7 @@ Transform:
   m_LocalScale: {x: 1, y: .812499762, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &1549951840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,7 +1404,7 @@ Transform:
   m_LocalScale: {x: 1, y: .812499762, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!1 &1688311726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1532,7 @@ Transform:
   m_LocalScale: {x: 1, y: .812499762, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &1903624495
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
