@@ -533,7 +533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 69
+  m_RootOrder: 73
 --- !u!4 &65884195
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
@@ -1029,7 +1029,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 67
 --- !u!1 &206405294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1871,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1904,6 +1904,10 @@ Prefab:
     - target: {fileID: 188978, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_Name
       value: Lava 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557338, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
+      propertyPath: m_Size.z
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
@@ -2815,7 +2819,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2848,6 +2852,10 @@ Prefab:
     - target: {fileID: 188978, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_Name
       value: Lava 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557338, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
+      propertyPath: m_Size.z
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
@@ -3044,7 +3052,7 @@ Transform:
   - {fileID: 508287013}
   - {fileID: 1284913117}
   m_Father: {fileID: 0}
-  m_RootOrder: 93
+  m_RootOrder: 99
 --- !u!1 &573786860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4539,7 +4547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 74
 --- !u!1001 &826819858
 Prefab:
   m_ObjectHideFlags: 0
@@ -7844,7 +7852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7877,6 +7885,10 @@ Prefab:
     - target: {fileID: 188978, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_Name
       value: Lava 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557338, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
+      propertyPath: m_Size.z
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
@@ -8256,7 +8268,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 69
 --- !u!1 &1345616622
 GameObject:
   m_ObjectHideFlags: 0
@@ -9570,7 +9582,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9603,6 +9615,10 @@ Prefab:
     - target: {fileID: 188978, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_Name
       value: Lava 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557338, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
+      propertyPath: m_Size.z
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
@@ -10002,7 +10018,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -10035,6 +10051,10 @@ Prefab:
     - target: {fileID: 188978, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_Name
       value: Lava 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557338, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
+      propertyPath: m_Size.z
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
@@ -11281,7 +11301,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11314,6 +11334,10 @@ Prefab:
     - target: {fileID: 188978, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_Name
       value: Lava 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557338, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
+      propertyPath: m_Size.z
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
@@ -12118,7 +12142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 64
 --- !u!1 &2046879589
 GameObject:
   m_ObjectHideFlags: 0
