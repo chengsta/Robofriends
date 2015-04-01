@@ -10,6 +10,13 @@ public class Player : MonoBehaviour {
 	public Animator anim;
 	public Camera camera;
 
+	public AudioClip walkSound;
+	private float walktimer = 5.0f;
+	void playSound(AudioClip sound, float vol){
+		GetComponent<AudioSource>().clip = sound;
+		GetComponent<AudioSource>().volume = vol;
+		GetComponent<AudioSource>().Play();
+	}
 
 	private GroundChecker groundChecker;
 	private GameObject SpriteChild;
@@ -56,12 +63,18 @@ public class Player : MonoBehaviour {
 		}
 		float h = Input.GetAxis ("Horizontal");
 		if (!groundChecker.IsGrounded ()) {	
+			playSound(walkSound, 1.0f);
 			anim.Play ("PlayerJump");
 		} else if (GetComponent<Rigidbody>().velocity.x == 0) {
 			anim.Play ("PlayerStand");
 		} else {			
 			anim.Play ("PlayerWalk");
+			if (walktimer > 0.3f) {
+				GetComponent<AudioSource>().PlayOneShot(walkSound, 0.5f);
+				walktimer = 0;
+			}
 		}
+		walktimer += Time.fixedDeltaTime;
 
 		Vector3 temp = SpriteChild.transform.localScale;
 		Vector3 gunTemp= GunSpriteChild.transform.localScale;

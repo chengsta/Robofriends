@@ -4,6 +4,16 @@ using System.Collections;
 public class Door : MonoBehaviour {
 	public bool default_closed = true;
 
+	public AudioClip DoorOpen;
+	public AudioClip DoorClose;
+	public bool audioPlaying;
+	
+	void playSound(AudioClip sound, float vol){
+		GetComponent<AudioSource>().clip = sound;
+		GetComponent<AudioSource>().volume = vol;
+		GetComponent<AudioSource>().Play();
+	}
+
 	public bool open;
 	public int DistanceToMove = 5;
 	private float finalPosition;
@@ -28,12 +38,29 @@ public class Door : MonoBehaviour {
 			//transform.position = new Vector3(transform.position.x, transform.position.y + 2.0f, transform.position.z);
 			transform.position = transform.position + transform.up;
 			count++;
+			if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().clip == DoorClose) {
+				GetComponent<AudioSource>().Stop();
+			}
+			if (!audioPlaying) {
+				playSound (DoorOpen, 0.5f);
+				audioPlaying = true;
+			}
 		}
 
-		if (!open && count > 0) {
+		else if (!open && count > 0) {
 			//transform.position = new Vector3(transform.position.x, transform.position.y - 2.0f, transform.position.z);
 			transform.position = transform.position - transform.up;
 			count--;
+			if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().clip == DoorOpen) {
+				GetComponent<AudioSource>().Stop();
+			}
+			if (!audioPlaying) {
+				playSound (DoorClose, 0.5f);
+				audioPlaying = true;
+			}
+		}
+		else {
+			audioPlaying = false;
 		}
 		//if (count == DistanceToMove || count == 0) {
 		//	opened = !opened;

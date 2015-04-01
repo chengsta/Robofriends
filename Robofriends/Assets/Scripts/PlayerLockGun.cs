@@ -7,7 +7,12 @@ public class PlayerLockGun : MonoBehaviour {
 	private Robot lockedRobot;
 	public float maxShootDistance;
 	public float shootTime;
-
+	public AudioClip GunSound;
+	void playSound(AudioClip sound, float vol){
+		GetComponent<AudioSource>().clip = sound;
+		GetComponent<AudioSource>().volume = vol;
+		GetComponent<AudioSource>().Play();
+	}
 	//for gravity flipping
 	private IEnumerator gravCoroutine;
 
@@ -107,6 +112,7 @@ public class PlayerLockGun : MonoBehaviour {
 
 	IEnumerator shootLine() {
 		float timer = shootTime;
+		playSound (GunSound, 1.0f);
 
 		while (timer > 0) {
 			float lerpPercent = 1 - (timer / shootTime);

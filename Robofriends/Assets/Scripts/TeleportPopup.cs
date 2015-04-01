@@ -8,6 +8,14 @@ public class TeleportPopup : MonoBehaviour {
 	public Color TeleportColorStart;
 	public Color TeleportColorEnd;
 	
+	public AudioClip EndLevel;
+	private bool playedSound = false;
+	void playSound(AudioClip sound, float vol){
+		GetComponent<AudioSource>().clip = sound;
+		GetComponent<AudioSource>().volume = vol;
+		GetComponent<AudioSource>().Play();
+	}
+
 	private Transform player;
 
 	// Use this for initialization
@@ -50,7 +58,10 @@ public class TeleportPopup : MonoBehaviour {
 		Vector3 endScale = new Vector3(0, 1, 1);
 		Vector3 startPos = new Vector3(player.position.x, player.position.y, player.position.z);
 		Vector3 endPos = new Vector3(startPos.x, startPos.y + teleportAnimHeight, startPos.z);
-		
+		if (!playedSound) {
+			playSound(EndLevel, 1.0f);
+			playedSound = true;
+		}
 		player.GetComponent<Player>().enabled = false;
 		//player.FindChild("Beam").gameObject.SetActive(true);
 		
