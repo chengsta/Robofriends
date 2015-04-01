@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\DoorSwitch.cs" />
      <Compile Include="Assets\Scripts\Elevator.cs" />
      <Compile Include="Assets\Scripts\EnemyStopper.cs" />
+     <Compile Include="Assets\Scripts\Entrance.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\GravityWell.cs" />
      <Compile Include="Assets\Scripts\GroundChecker.cs" />

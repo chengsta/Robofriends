@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour {
 	//private static LevelManager _instance;
 	private static Object _lock = new Object();
 	private static HashSet<int> completed_levels = new HashSet<int>();
+	public static int LastLevelVisited = 0;
 
 //	public static LevelManager GetInstance() {
 //		lock(_lock) {
