@@ -112,7 +112,7 @@ public class PlayerLockGun : MonoBehaviour {
 
 	IEnumerator shootLine() {
 		float timer = shootTime;
-		playSound (GunSound, 1.0f);
+		GetComponent<AudioSource>().PlayOneShot(GunSound, 1.0f);
 
 		while (timer > 0) {
 			float lerpPercent = 1 - (timer / shootTime);
