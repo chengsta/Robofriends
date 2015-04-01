@@ -1580,7 +1580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: "When connected to Red Robots, \npress F to swap"
+      value: "When connected to Red Robots, \npress E to swap"
       objectReference: {fileID: 0}
     - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_AnchoredPosition.x

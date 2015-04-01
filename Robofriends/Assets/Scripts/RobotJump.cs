@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class RobotJump : Robot {
-	private GroundChecker groundChecker;
+	private GroundChecker myGroundChecker;
 
 	// Use this for initialization
 	public virtual void Start () {
-		groundChecker  = GetComponent<GroundChecker>();
+		myGroundChecker  = GetComponent<GroundChecker>();
 	}
 	
 	// Update is called once per frame
@@ -15,6 +15,6 @@ public class RobotJump : Robot {
 	}
 
 	public override bool CanJump() {
-		return groundChecker.IsGrounded();
+		return myGroundChecker.IsGrounded();
 	}
 }
