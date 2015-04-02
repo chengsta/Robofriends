@@ -513,15 +513,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: 
+      value: "You can shoot while connected \n(You don't have to disconnect first)"
       objectReference: {fileID: 0}
     - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -41
+      value: -76
       objectReference: {fileID: 0}
     - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 118
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 11437148, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
