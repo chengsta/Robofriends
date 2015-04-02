@@ -118,6 +118,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   tempAnimEnabled: 0
   up_force: 30
+  max_speed: 20
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

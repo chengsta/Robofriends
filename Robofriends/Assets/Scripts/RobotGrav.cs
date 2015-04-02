@@ -3,6 +3,7 @@ using System.Collections;
 
 public class RobotGrav : Robot {
 	public float up_force;
+	public float max_speed;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,12 @@ public class RobotGrav : Robot {
 	public IEnumerator ReverseGrav () {
 		while (true) {
 //			print ("start of grav coroutine");
-			GetComponentInParent<Rigidbody>().useGravity = false;
-			GetComponentInParent<Rigidbody>().AddForce(up_force * Vector3.up);
+			Rigidbody rb = GetComponentInParent<Rigidbody>();
+
+			rb.useGravity = false;
+			if (rb.velocity.y < max_speed) {
+				rb.AddForce(up_force * Vector3.up);
+			}
 			yield return null;
 		}
 	}
