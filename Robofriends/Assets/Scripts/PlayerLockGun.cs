@@ -18,6 +18,7 @@ public class PlayerLockGun : MonoBehaviour {
 
 	//private LineRenderer connection;
 	private VolumetricLineBehavior volConnection;
+	private Object lineLock = new Object();
 
 	// Use this for initialization
 	void Start () {
@@ -93,6 +94,20 @@ public class PlayerLockGun : MonoBehaviour {
 	}
 	
 
+	void FixedUpdate() {
+		if (Input.GetButtonDown ("Action")) {
+			if (lockedRobot && lockedRobot.GetComponent<RobotSwap>()) {
+				Vector3 currentLocation = this.transform.position;
+				Vector3 robotLocation = lockedRobot.transform.position;
+					
+				this.transform.position = robotLocation;
+				lockedRobot.transform.position = currentLocation;
+					
+				volConnection.m_endPos = volConnection.m_endPos * -1;
+			}
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Fire1")) {
@@ -100,15 +115,6 @@ public class PlayerLockGun : MonoBehaviour {
 		}
 		else if (Input.GetButtonDown("Fire2")) {
 			ReleaseRobot ();
-		}
-		else if (Input.GetButtonDown ("Action")) {
-			if (lockedRobot && lockedRobot.GetComponent<RobotSwap>()) {
-				Vector3 currentLocation = this.transform.position;
-				Vector3 robotLocation = lockedRobot.transform.position;
-
-				this.transform.position = robotLocation;
-				lockedRobot.transform.position = currentLocation;
-			}
 		}
 	}
 
@@ -129,13 +135,17 @@ public class PlayerLockGun : MonoBehaviour {
 			yield return null;
 		}
 
+		volConnection.m_endPos = lockedRobot.transform.position - transform.position;
 		StartCoroutine("drawLine");
 	}
 
 	IEnumerator drawLine() {
 		while(lockedRobot) {
-			volConnection.m_startPos = Vector3.zero;
-			volConnection.m_endPos = lockedRobot.transform.position - transform.position;
+//			lock(lineLock) {
+//				volConnection.m_endPos = lockedRobot.transform.position - transform.position;
+//				volConnection.m_startPos = Vector3.zero;
+//
+//			}
 
 
 			//connection.SetPosition(0, this.transform.position);
@@ -143,8 +153,8 @@ public class PlayerLockGun : MonoBehaviour {
 			yield return null;
 
 			if (lockedRobot == null) {
-				volConnection.m_startPos = Vector3.zero;
-				volConnection.m_endPos = Vector3.zero;
+					volConnection.m_startPos = Vector3.zero;
+					volConnection.m_endPos = Vector3.zero;
 
 				//connection.SetPosition (0, Vector3.zero);
 				//connection.SetPosition (1, Vector3.zero);
