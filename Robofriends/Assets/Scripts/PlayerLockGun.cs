@@ -63,8 +63,10 @@ public class PlayerLockGun : MonoBehaviour {
 		direction.Normalize();
 
 		if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, layerMask)) {
-			Robot r;
-			if (r = hit.collider.gameObject.GetComponent<Robot>()) {
+			Robot r = hit.collider.gameObject.GetComponent<Robot>();
+
+			if (r != null && r != lockedRobot) {
+
 				if (lockedRobot) {
 					ReleaseRobot();
 				}
