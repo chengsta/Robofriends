@@ -8,6 +8,7 @@ public class PlayerLockGun : MonoBehaviour {
 	public float maxShootDistance;
 	public float shootTime;
 	public AudioClip GunSound;
+
 	void playSound(AudioClip sound, float vol){
 		GetComponent<AudioSource>().clip = sound;
 		GetComponent<AudioSource>().volume = vol;
@@ -29,9 +30,13 @@ public class PlayerLockGun : MonoBehaviour {
 		Vector3 clickPos;
 		Vector3 direction;
 		int layerMask = LayerMask.GetMask("Platform", "Robot");
+		int robotMask = LayerMask.GetMask ("Robot");
 		RaycastHit hit = new RaycastHit();
 
 		while (Input.GetButton("Fire1")) {
+			print (GetComponent<LineRenderer>().material);
+
+			GetComponent<LineRenderer>().material = GetComponent<LineRenderer>().materials[1];
 			clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			clickPos.z = 0;
 
@@ -48,6 +53,11 @@ public class PlayerLockGun : MonoBehaviour {
 
 			GetComponent<LineRenderer>().SetPosition(0, transform.position);
 			GetComponent<LineRenderer>().SetPosition(1, lineEndpoint);
+
+			if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, robotMask)) {
+				GetComponent<LineRenderer>().material = GetComponent<LineRenderer>().materials[2];
+			}
+
 			yield return null;
 		}
 
