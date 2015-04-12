@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using VolumetricLines;
+using UnityEngine.UI;
 
 public class PlayerLockGun : MonoBehaviour {
 	public float slowdown;
 	private Robot lockedRobot;
 	public float maxShootDistance;
 	public float shootTime;
+	public float vignetteFadeTime;
 	public AudioClip GunSound;
 	void playSound(AudioClip sound, float vol){
 		GetComponent<AudioSource>().clip = sound;
@@ -18,12 +20,16 @@ public class PlayerLockGun : MonoBehaviour {
 
 	//private LineRenderer connection;
 	private VolumetricLineBehavior volConnection;
-	private Object lineLock = new Object();
+
+	private Image vignette;
+
 
 	// Use this for initialization
 	void Start () {
 		//connection = transform.FindChild("Gun").GetComponentInChildren<LineRenderer>();
 		volConnection = transform.FindChild("Connector").GetComponent<VolumetricLineBehavior>();
+		vignette = GameObject.FindGameObjectWithTag("Vignette").GetComponent<Image>();
+		vignette.CrossFadeAlpha(0, .00001f, true);
 	}
 
 	IEnumerator fireGun() {
@@ -31,6 +37,8 @@ public class PlayerLockGun : MonoBehaviour {
 		Vector3 direction;
 		int layerMask = LayerMask.GetMask("Platform", "Robot");
 		RaycastHit hit = new RaycastHit();
+
+		vignette.CrossFadeAlpha(1, vignetteFadeTime, true);
 
 		while (Input.GetButton("Fire1")) {
 			clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -51,6 +59,8 @@ public class PlayerLockGun : MonoBehaviour {
 			GetComponent<LineRenderer>().SetPosition(1, lineEndpoint);
 			yield return null;
 		}
+
+		vignette.CrossFadeAlpha(0, vignetteFadeTime, true);
 
 		GetComponent<LineRenderer>().SetPosition(0, Vector3.zero);
 		GetComponent<LineRenderer>().SetPosition(1, Vector3.zero);
