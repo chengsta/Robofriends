@@ -38,7 +38,7 @@ public class PlayerLockGun : MonoBehaviour {
 		int layerMask = LayerMask.GetMask("Platform", "Robot");
 		RaycastHit hit = new RaycastHit();
 
-		vignette.CrossFadeAlpha(1, vignetteFadeTime, true);
+		vignette.CrossFadeAlpha(1, vignetteFadeTime * 3, true);
 
 		while (Input.GetButton("Fire1")) {
 			clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
