@@ -7,11 +7,11 @@ public class RisingLava : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 
 	void FixedUpdate() {
-		transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
+		float dy = speed * Time.deltaTime;
+		transform.position = new Vector3(transform.position.x, transform.position.y + dy, transform.position.z);
 	}
 
 	// Update is called once per frame

@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using VolumetricLines;
+using UnityEngine.UI;
 
 public class PlayerLockGun : MonoBehaviour {
 	public float slowdown;
 	private Robot lockedRobot;
 	public float maxShootDistance;
 	public float shootTime;
+	public float vignetteFadeTime;
 	public AudioClip GunSound;
 	void playSound(AudioClip sound, float vol){
 		GetComponent<AudioSource>().clip = sound;
@@ -19,10 +21,15 @@ public class PlayerLockGun : MonoBehaviour {
 	//private LineRenderer connection;
 	private VolumetricLineBehavior volConnection;
 
+	private Image vignette;
+
+
 	// Use this for initialization
 	void Start () {
 		//connection = transform.FindChild("Gun").GetComponentInChildren<LineRenderer>();
 		volConnection = transform.FindChild("Connector").GetComponent<VolumetricLineBehavior>();
+		vignette = GameObject.FindGameObjectWithTag("Vignette").GetComponent<Image>();
+		vignette.CrossFadeAlpha(0, .00001f, true);
 	}
 
 	IEnumerator fireGun() {
@@ -30,6 +37,8 @@ public class PlayerLockGun : MonoBehaviour {
 		Vector3 direction;
 		int layerMask = LayerMask.GetMask("Platform", "Robot");
 		RaycastHit hit = new RaycastHit();
+
+		vignette.CrossFadeAlpha(1, vignetteFadeTime * 3, true);
 
 		while (Input.GetButton("Fire1")) {
 			clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -51,6 +60,8 @@ public class PlayerLockGun : MonoBehaviour {
 			yield return null;
 		}
 
+		vignette.CrossFadeAlpha(0, vignetteFadeTime, true);
+
 		GetComponent<LineRenderer>().SetPosition(0, Vector3.zero);
 		GetComponent<LineRenderer>().SetPosition(1, Vector3.zero);
 
@@ -63,8 +74,10 @@ public class PlayerLockGun : MonoBehaviour {
 		direction.Normalize();
 
 		if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, layerMask)) {
-			Robot r;
-			if (r = hit.collider.gameObject.GetComponent<Robot>()) {
+			Robot r = hit.collider.gameObject.GetComponent<Robot>();
+
+			if (r != null && r != lockedRobot) {
+
 				if (lockedRobot) {
 					ReleaseRobot();
 				}
@@ -91,6 +104,20 @@ public class PlayerLockGun : MonoBehaviour {
 	}
 	
 
+	void FixedUpdate() {
+		if (Input.GetButtonDown ("Action")) {
+			if (lockedRobot && lockedRobot.GetComponent<RobotSwap>()) {
+				Vector3 currentLocation = this.transform.position;
+				Vector3 robotLocation = lockedRobot.transform.position;
+					
+				this.transform.position = robotLocation;
+				lockedRobot.transform.position = currentLocation;
+					
+				volConnection.m_endPos = volConnection.m_endPos * -1;
+			}
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Fire1")) {
@@ -98,15 +125,6 @@ public class PlayerLockGun : MonoBehaviour {
 		}
 		else if (Input.GetButtonDown("Fire2")) {
 			ReleaseRobot ();
-		}
-		else if (Input.GetButtonDown ("Action")) {
-			if (lockedRobot && lockedRobot.GetComponent<RobotSwap>()) {
-				Vector3 currentLocation = this.transform.position;
-				Vector3 robotLocation = lockedRobot.transform.position;
-
-				this.transform.position = robotLocation;
-				lockedRobot.transform.position = currentLocation;
-			}
 		}
 	}
 
@@ -127,13 +145,17 @@ public class PlayerLockGun : MonoBehaviour {
 			yield return null;
 		}
 
+		volConnection.m_endPos = lockedRobot.transform.position - transform.position;
 		StartCoroutine("drawLine");
 	}
 
 	IEnumerator drawLine() {
 		while(lockedRobot) {
-			volConnection.m_startPos = Vector3.zero;
-			volConnection.m_endPos = lockedRobot.transform.position - transform.position;
+//			lock(lineLock) {
+//				volConnection.m_endPos = lockedRobot.transform.position - transform.position;
+//				volConnection.m_startPos = Vector3.zero;
+//
+//			}
 
 
 			//connection.SetPosition(0, this.transform.position);
@@ -141,8 +163,8 @@ public class PlayerLockGun : MonoBehaviour {
 			yield return null;
 
 			if (lockedRobot == null) {
-				volConnection.m_startPos = Vector3.zero;
-				volConnection.m_endPos = Vector3.zero;
+					volConnection.m_startPos = Vector3.zero;
+					volConnection.m_endPos = Vector3.zero;
 
 				//connection.SetPosition (0, Vector3.zero);
 				//connection.SetPosition (1, Vector3.zero);
