@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &144956
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,6 +45,7 @@ GameObject:
   - 223: {fileID: 22344956}
   - 114: {fileID: 11444960}
   - 114: {fileID: 11444958}
+  - 114: {fileID: 11401454}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -98,6 +99,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 22444958}
   m_RootOrder: 3
+--- !u!114 &11401454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b89169ab68e704e8e99df8ac8d5742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11427770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,7 +156,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Stage 0
+  m_Text: 'Stage 23
+
+'
 --- !u!114 &11444956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,11 +184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Connect to robots to move them around.
-
-    Use left click to shoot and connect to robots.
-
-    Use right click to disconnect.'
+  m_Text: 
 --- !u!114 &11444958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1355,7 +1365,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -46, y: 122}
+  m_AnchoredPosition: {x: -41, y: 118}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22444958

@@ -641,24 +641,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -41
-      objectReference: {fileID: 0}
-    - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 118
-      objectReference: {fileID: 0}
-    - target: {fileID: 11437148, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
-      propertyPath: m_Text
-      value: 'Stage 23
-
-'
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
   m_IsPrefabParent: 0
@@ -862,7 +844,7 @@ Transform:
   m_LocalScale: {x: 1.13022661, y: .678125203, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
 --- !u!4 &1148120348
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
@@ -1354,7 +1336,7 @@ Transform:
   m_LocalScale: {x: 1.14999998, y: .678125203, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1001 &1752784792
 Prefab:
   m_ObjectHideFlags: 0
