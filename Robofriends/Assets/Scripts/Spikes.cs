@@ -22,6 +22,7 @@ public class Spikes : MonoBehaviour {
 		}
 		else if (r = coll.gameObject.GetComponent<Robot>()) {
 			r.hitBySpikes();
+			GameObject.Find("Player").GetComponent<Player>().FailState();
 		}
 		
 	}

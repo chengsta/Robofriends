@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Manager : MonoBehaviour {
+
+	public bool show_fail_state = false;
 	
 	private Image death;
 	public GameObject player;
