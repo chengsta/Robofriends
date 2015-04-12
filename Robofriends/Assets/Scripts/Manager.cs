@@ -5,8 +5,8 @@ using System.Collections;
 public class Manager : MonoBehaviour {
 
 	void Awake() {
-		GameObject vignette = GameObject.FindGameObjectWithTag("Vignette");
-		vignette.SetActive(true);
+//		GameObject vignette = GameObject.FindGameObjectWithTag("Vignette");
+//		vignette.SetActive(true);
 	}
 	// Use this for initialization
 	void Start () {
