@@ -878,9 +878,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: 'When connected, you will move
-
-        together as one with the robot.'
+      value: "When connected, movement is \nlinked between you and the robot"
       objectReference: {fileID: 0}
     - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_AnchoredPosition.x
