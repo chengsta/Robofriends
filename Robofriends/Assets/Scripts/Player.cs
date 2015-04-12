@@ -35,9 +35,6 @@ public class Player : MonoBehaviour {
 		setVertSpeed (jumpSpeed/4);
 	}
 
-	//FAIL STATE
-	private bool show_fail_state;
-	
 //	IEnumerator SwapCheck() {
 //		while (true) {
 //			if (Input.GetButtonDown("Action")) {
@@ -58,9 +55,6 @@ public class Player : MonoBehaviour {
 		anim = this.GetComponentInChildren<Animator>();
 		camera = Camera.main;
 //		Camera.main.GetComponent<LockController> ().players.Add (gameObject);
-
-		//FAIL STATE
-		show_fail_state = Camera.main.GetComponent<Manager>().show_fail_state;
 	}
 	
 	// Update is called once per frame
@@ -179,7 +173,9 @@ public class Player : MonoBehaviour {
 	}
 
 	public void FailState() {
-		GameObject.Find("Text").GetComponent<Text>().text = "LOL RESET YOU NOOB";
+		if (Camera.main.GetComponent<Manager>().show_fail_state) {
+			GameObject.Find("Text").GetComponent<Text>().text = "LOL RESET YOU NOOB";
+		}
 	}
 
 //	public void reverse_gravity() {
