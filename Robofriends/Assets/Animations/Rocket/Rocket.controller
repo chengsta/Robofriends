@@ -5,13 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GroundRobot
+  m_Name: Rocket
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110710550}
+    m_StateMachine: {fileID: 110738206}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -22,41 +22,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 0}
   m_MultiThreadedStateMachine: 1
---- !u!1102 &110201872
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: RobotDead
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: b62757c9595f3954dbf100d342c7b56a, type: 2}
-  m_Tag: 
---- !u!1102 &110250992
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: RobotAir
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: a509f021e5946de4792b2d54a5844e80, type: 2}
-  m_Tag: 
---- !u!1102 &110259122
+--- !u!1102 &110206088
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -71,9 +37,60 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 76b14d6f17bf05048b0dea8c7038d579, type: 2}
+  m_Motion: {fileID: 7400000, guid: 80215a6dadf8b8c4491c34b399e6860e, type: 2}
   m_Tag: 
---- !u!1107 &110710550
+--- !u!1102 &110237114
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: RocketJump
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: 80215a6dadf8b8c4491c34b399e6860e, type: 2}
+  m_Tag: 
+--- !u!1102 &110259862
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: RobotDead
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: 64ec38392245fd344ba524ef27739d1c, type: 2}
+  m_Tag: 
+--- !u!1102 &110278520
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: RobotAir
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: 80215a6dadf8b8c4491c34b399e6860e, type: 2}
+  m_Tag: 
+--- !u!1107 &110738206
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -82,21 +99,27 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 110259122}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_State: {fileID: 110259862}
+    m_Position: {x: 288, y: 36, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110201872}
-    m_Position: {x: 235, y: 65, z: 0}
+    m_State: {fileID: 110278520}
+    m_Position: {x: 324, y: 168, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110250992}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_State: {fileID: 110237114}
+    m_Position: {x: 443, y: 233, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110206088}
+    m_Position: {x: 300, y: 96, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
-  m_StateMachineTransitions: {}
+  m_StateMachineTransitions:
+    data:
+      first: {fileID: 110738206}
+      second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_EntryPosition: {x: 36, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 110259122}
+  m_DefaultState: {fileID: 110259862}
