@@ -70,6 +70,8 @@
      <Compile Include="Assets\Scripts\GravityWell.cs" />
      <Compile Include="Assets\Scripts\GroundChecker.cs" />
      <Compile Include="Assets\Scripts\GunRotate.cs" />
+     <Compile Include="Assets\Scripts\InitializeDeath.cs" />
+     <Compile Include="Assets\Scripts\InitializeVignette.cs" />
      <Compile Include="Assets\Scripts\LaserRenderer.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />

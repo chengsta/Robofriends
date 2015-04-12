@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Vignette
+  - Death
   layers:
   - Default
   - TransparentFX
