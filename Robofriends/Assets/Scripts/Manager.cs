@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Manager : MonoBehaviour {
 
+	void Awake() {
+
+	}
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1f;

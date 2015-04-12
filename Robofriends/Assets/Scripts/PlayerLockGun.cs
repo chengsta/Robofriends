@@ -28,6 +28,7 @@ public class PlayerLockGun : MonoBehaviour {
 	void Start () {
 		//connection = transform.FindChild("Gun").GetComponentInChildren<LineRenderer>();
 		volConnection = transform.FindChild("Connector").GetComponent<VolumetricLineBehavior>();
+
 		vignette = GameObject.FindGameObjectWithTag("Vignette").GetComponent<Image>();
 		vignette.CrossFadeAlpha(0, .00001f, true);
 	}
