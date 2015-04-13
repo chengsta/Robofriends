@@ -7,11 +7,9 @@ public class RobotGrav : Robot {
 
 	// Use this for initialization
 	void Start () {
-		if (tempAnimEnabled) {
-			anim = this.GetComponentInChildren<Animator>();
-			anim.Play ("RobotDead");
-			sprite = this.GetComponentInChildren<Transform>();
-		}
+		anim = this.GetComponentInChildren<Animator>();
+		anim.Play ("RobotDead");
+		sprite = this.GetComponentInChildren<Transform>();
 	}
 	
 	// Update is called once per frame

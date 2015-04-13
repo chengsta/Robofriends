@@ -3,7 +3,12 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Spikes : MonoBehaviour {
-
+	public AudioClip LavaDeathSound;
+	void playSound(AudioClip sound, float vol){
+		GetComponent<AudioSource>().clip = sound;
+		GetComponent<AudioSource>().volume = vol;
+		GetComponent<AudioSource>().Play();
+	}
 	public GameObject mainCamera;
 	// Use this for initialization
 	void Start () {
@@ -16,6 +21,7 @@ public class Spikes : MonoBehaviour {
 
 	void OnTriggerEnter(Collider coll) {
 		Robot r;
+		GetComponent<AudioSource>().PlayOneShot(LavaDeathSound, 1.0f);
 		if (coll.gameObject.GetComponent<Player>()) {
 			//disable character's scripts here
 			mainCamera.GetComponent<Manager>().FailState();

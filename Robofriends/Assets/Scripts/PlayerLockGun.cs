@@ -34,7 +34,7 @@ public class PlayerLockGun : MonoBehaviour {
 		volConnection = transform.FindChild("Connector").GetComponent<VolumetricLineBehavior>();
 
 		vignette = GameObject.FindGameObjectWithTag("Vignette").GetComponent<Image>();
-		vignette.CrossFadeAlpha(0, .00001f, true);
+
 	}
 
 	IEnumerator fireGun() {

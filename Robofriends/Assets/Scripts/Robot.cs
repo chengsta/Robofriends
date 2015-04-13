@@ -6,9 +6,8 @@ public class Robot : MonoBehaviour {
 	public PhysicMaterial frictionless;
 	public Animator anim;
 	public Transform sprite;
-	public bool tempAnimEnabled = false;
 	private GroundChecker groundChecker;
-	private bool connected;
+	public bool connected;
 	Rigidbody rigidbody;
 	
 	public virtual bool CanJump() {
@@ -17,11 +16,10 @@ public class Robot : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		if (tempAnimEnabled) {
-			anim = this.GetComponentInChildren<Animator>();
-			anim.Play ("RobotDead");
-			sprite = this.GetComponentInChildren<Transform>();
-		}
+		anim = this.GetComponentInChildren<Animator>();
+		anim.Play ("RobotDead");
+		sprite = this.GetComponentInChildren<Transform>();
+		
 		rigidbody = gameObject.GetComponent<Rigidbody>();
 		GetComponent<Collider>().material = friction;
 		groundChecker = GetComponent<GroundChecker>();
@@ -33,7 +31,7 @@ public class Robot : MonoBehaviour {
 		if (transform.rotation != Quaternion.identity) {
 			transform.rotation = Quaternion.identity;
 		}
-		if (tempAnimEnabled && connected) {
+		if (connected) {
 			Vector3 tmpScale = sprite.localScale;
 			if (Input.GetAxis("Horizontal") < -0.1f) {
 				tmpScale.x = 1;
@@ -43,7 +41,7 @@ public class Robot : MonoBehaviour {
 			sprite.localScale = tmpScale;
 		}
 
-		if (connected && tempAnimEnabled) {
+		if (connected) {
 			if (groundChecker.IsGrounded () && Mathf.Abs (Input.GetAxis ("Horizontal")) > 0.2f) {
 				anim.Play ("RobotRoll");
 			} else {
@@ -54,9 +52,7 @@ public class Robot : MonoBehaviour {
 	
 	public virtual void SetParent(GameObject go) {
 		connected = true;
-		if (tempAnimEnabled) {
-			anim.Play ("RobotAir");
-		}
+		anim.Play ("RobotAir");
 		Vector3 _posRobot = transform.position;
 		Vector3 _posGo = go.transform.position;
 		
@@ -72,9 +68,7 @@ public class Robot : MonoBehaviour {
 	
 	public virtual void ReleaseParent() {
 		connected = false;
-		if (tempAnimEnabled) {
-			anim.Play ("RobotDead");
-		}
+		anim.Play ("RobotDead");
 		Rigidbody rb = gameObject.AddComponent<Rigidbody>() as Rigidbody;
 		
 		rb.freezeRotation = true;
