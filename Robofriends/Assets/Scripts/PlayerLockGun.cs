@@ -118,8 +118,10 @@ public class PlayerLockGun : MonoBehaviour {
 	}
 	
 
+	private bool swap = false;
+
 	void FixedUpdate() {
-		if (Input.GetButtonDown ("Action")) {
+		if (swap) {
 			if (lockedRobot && lockedRobot.GetComponent<RobotSwap>()) {
 				Vector3 currentLocation = this.transform.position;
 				Vector3 robotLocation = lockedRobot.transform.position;
@@ -129,6 +131,8 @@ public class PlayerLockGun : MonoBehaviour {
 					
 				volConnection.m_endPos = volConnection.m_endPos * -1;
 			}
+
+			swap = false;
 		}
 	}
 
@@ -139,6 +143,9 @@ public class PlayerLockGun : MonoBehaviour {
 		}
 		else if (Input.GetButtonDown("Fire2")) {
 			ReleaseRobot ();
+		}
+		else if (Input.GetButtonDown ("Action")) {
+			swap = true;
 		}
 	}
 
