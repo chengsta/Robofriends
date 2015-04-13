@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &159674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 438730}
+  - 111: {fileID: 11152178}
+  - 212: {fileID: 21209502}
+  - 95: {fileID: 9545034}
+  m_Layer: 0
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &197296
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,8 +30,6 @@ GameObject:
   - 54: {fileID: 5497296}
   - 114: {fileID: 11497298}
   - 114: {fileID: 11497296}
-  - 212: {fileID: 21292266}
-  - 95: {fileID: 9558290}
   m_Layer: 9
   m_Name: GroundRobot
   m_TagString: Untagged
@@ -21,6 +37,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &438730
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 497296}
+  m_RootOrder: 0
 --- !u!4 &497296
 Transform:
   m_ObjectHideFlags: 1
@@ -28,9 +56,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.45015907, y: -4.1479907, z: 0}
+  m_LocalPosition: {x: 8.0564537, y: 1.0479759, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 438730}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!54 &5497296
@@ -60,13 +89,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &9558290
+--- !u!95 &9545034
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197296}
+  m_GameObject: {fileID: 159674}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b0da58362b306694d9a2c4e9254b3d3d, type: 2}
@@ -77,6 +106,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &11152178
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159674}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0a56ea94d2747e248a46e2fbf5b1213a, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11497296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   friction: {fileID: 13400000, guid: 7cf8b13725aec4e408dfd7e6d7e02200, type: 2}
   frictionless: {fileID: 13400000, guid: 306d1ffccdbbfcc47b542fdb86eb9606, type: 2}
-  anim: {fileID: 9558290}
+  anim: {fileID: 0}
   tempAnimEnabled: 1
 --- !u!114 &11497298
 MonoBehaviour:
@@ -103,12 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fb82ecfedf6ae4596faad0b49a2318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &21292266
+--- !u!212 &21209502
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197296}
+  m_GameObject: {fileID: 159674}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -127,7 +170,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae9241f5ff96e2949a4b9775f983a5f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 613f9e5a52d55e941841ae4e8aa0e15c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

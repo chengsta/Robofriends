@@ -5,6 +5,7 @@ public class Robot : MonoBehaviour {
 	public PhysicMaterial friction;
 	public PhysicMaterial frictionless;
 	public Animator anim;
+	public Transform sprite;
 	public bool tempAnimEnabled = false;
 	private GroundChecker groundChecker;
 	private bool connected;
@@ -17,8 +18,9 @@ public class Robot : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (tempAnimEnabled) {
-			anim = GetComponent<Animator> ();
+			anim = this.GetComponentInChildren<Animator>();
 			anim.Play ("RobotDead");
+			sprite = this.GetComponentInChildren<Transform>();
 		}
 		rigidbody = gameObject.GetComponent<Rigidbody>();
 		GetComponent<Collider>().material = friction;
@@ -31,6 +33,16 @@ public class Robot : MonoBehaviour {
 		if (transform.rotation != Quaternion.identity) {
 			transform.rotation = Quaternion.identity;
 		}
+		if (tempAnimEnabled && connected) {
+			Vector3 tmpScale = sprite.localScale;
+			if (Input.GetAxis("Horizontal") < -0.1f) {
+				tmpScale.x = 1;
+			} else if (Input.GetAxis("Horizontal") > 0.1f) {
+				tmpScale.x = -1;
+			}
+			sprite.localScale = tmpScale;
+		}
+
 		if (connected && tempAnimEnabled) {
 			if (groundChecker.IsGrounded () && Mathf.Abs (Input.GetAxis ("Horizontal")) > 0.2f) {
 				anim.Play ("RobotRoll");

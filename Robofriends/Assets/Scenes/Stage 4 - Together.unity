@@ -420,7 +420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -428,7 +428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .0264229085
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.z
@@ -436,7 +436,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .999650896
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 468268, guid: 06713e621e2544abc9da45d44e2bae3a, type: 2}
       propertyPath: m_RootOrder
@@ -568,7 +568,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11487372, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
       propertyPath: nextLevel
-      value: Stage 5 - Reset
+      value: Stage 4.5 - Left Click
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
@@ -878,9 +878,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: 'When connected, you will move
-
-        together as one with the robot.'
+      value: "When connected, movement is \nlinked between you and the robot"
       objectReference: {fileID: 0}
     - target: {fileID: 22444956, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -897,6 +895,10 @@ Prefab:
     - target: {fileID: 11437148, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
       value: Stage 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 144958, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}

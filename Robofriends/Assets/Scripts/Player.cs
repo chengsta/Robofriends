@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Player : MonoBehaviour {
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour {
 		}
 		setVertSpeed (jumpSpeed/4);
 	}
-	
+
 //	IEnumerator SwapCheck() {
 //		while (true) {
 //			if (Input.GetButtonDown("Action")) {
@@ -171,6 +172,11 @@ public class Player : MonoBehaviour {
 		Camera.main.GetComponent<LockController> ().unlock_movement ();
 	}
 
+	public void FailState() {
+		if (Camera.main.GetComponent<Manager>().show_fail_state) {
+			GameObject.Find("Text").GetComponent<Text>().text = "LOL RESET YOU NOOB";
+		}
+	}
 
 //	public void reverse_gravity() {
 //		StopCoroutine("Jump");
