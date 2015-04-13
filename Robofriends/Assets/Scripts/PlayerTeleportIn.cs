@@ -22,6 +22,7 @@ public class PlayerTeleportIn : MonoBehaviour {
 		startPos = new Vector3(endPos.x, endPos.y + teleportAnimHeight, endPos.z);
 
 		gameObject.GetComponent<Player>().enabled = false;
+		gameObject.GetComponent<PlayerLockGun>().enabled = false;
 		transform.localScale = startScale;
 		transform.position = startPos;
 		StartCoroutine("AnimateTeleportHelp");
@@ -59,5 +60,6 @@ public class PlayerTeleportIn : MonoBehaviour {
 
 		
 		gameObject.GetComponent<Player>().enabled = true;
+		gameObject.GetComponent<PlayerLockGun>().enabled = true;
 	}
 }
