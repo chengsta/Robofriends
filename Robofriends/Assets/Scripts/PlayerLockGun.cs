@@ -152,24 +152,22 @@ public class PlayerLockGun : MonoBehaviour {
 
 			volConnection.m_startPos = Vector3.zero;
 			
-			Vector3 endPos = Vector3.Lerp(Vector3.zero, lockedRobot.transform.position - transform.position, lerpPercent);
+			Vector3 endPos = Vector3.Lerp(Vector3.zero, lockedRobot.transform.localPosition, lerpPercent);
 			volConnection.m_endPos = endPos;
 			
 			timer -= Time.deltaTime;
 			yield return null;
 		}
 
-		volConnection.m_endPos = lockedRobot.transform.position - transform.position;
+		volConnection.m_endPos = lockedRobot.transform.localPosition;
 		StartCoroutine("drawLine");
 	}
 
 	IEnumerator drawLine() {
 		while(lockedRobot) {
-//			lock(lineLock) {
-//				volConnection.m_endPos = lockedRobot.transform.position - transform.position;
-//				volConnection.m_startPos = Vector3.zero;
+//			volConnection.m_endPos = lockedRobot.transform.position - transform.position;
+//			volConnection.m_startPos = Vector3.zero;
 //
-//			}
 
 
 			//connection.SetPosition(0, this.transform.position);
