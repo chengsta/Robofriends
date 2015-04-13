@@ -21,9 +21,9 @@ public class Spikes : MonoBehaviour {
 
 	void OnTriggerEnter(Collider coll) {
 		Robot r;
+		GetComponent<AudioSource>().PlayOneShot(LavaDeathSound, 1.0f);
 		if (coll.gameObject.GetComponent<Player>()) {
 			//disable character's scripts here
-			GetComponent<AudioSource>().PlayOneShot(LavaDeathSound, 1.0f);
 			mainCamera.GetComponent<Manager>().FailState();
 		}
 		else if (r = coll.gameObject.GetComponent<Robot>()) {
