@@ -42,7 +42,8 @@ public class Manager : MonoBehaviour {
 //		}
 
 		if (Input.GetButtonDown("Restart")) {
-			Application.LoadLevel(Application.loadedLevel);
+			death.CrossFadeAlpha(1, 0.4f, true);
+			StartCoroutine(dead(.3f));
 		}
 	
 	}

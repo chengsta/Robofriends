@@ -170,6 +170,7 @@ GameObject:
   - 114: {fileID: 11489548}
   - 120: {fileID: 12058212}
   - 82: {fileID: 8211680}
+  - 114: {fileID: 11436804}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -664,6 +665,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce54e3d959501964bbe46225549e9bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11436804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd68c2cdb82ff74294ccb7970485210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TeleportColorStart: {r: 0, g: 0, b: 0, a: 0}
+  TeleportColorEnd: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &11465802
 MonoBehaviour:
   m_ObjectHideFlags: 1
