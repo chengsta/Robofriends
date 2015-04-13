@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.3999996, y: -3.75999999, z: 0}
+  m_LocalPosition: {x: -15.4200001, y: 3.01999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450024}
@@ -724,6 +724,8 @@ MonoBehaviour:
   maxShootDistance: 100
   shootTime: .150000006
   GunSound: {fileID: 8300000, guid: df0f6171bdf696446a648bf950e26791, type: 3}
+  redMat: {fileID: 2100000, guid: 6686e64fc81081c4d8051f6287ca6618, type: 2}
+  greenMat: {fileID: 2100000, guid: 71d684619c4682d4e91ea4d21a532376, type: 2}
 --- !u!120 &12022266
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -772,8 +774,6 @@ LineRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: 6686e64fc81081c4d8051f6287ca6618, type: 2}
-  - {fileID: 2100000, guid: 6686e64fc81081c4d8051f6287ca6618, type: 2}
-  - {fileID: 2100000, guid: 71d684619c4682d4e91ea4d21a532376, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
