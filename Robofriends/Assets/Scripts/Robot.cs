@@ -9,6 +9,8 @@ public class Robot : MonoBehaviour {
 	private GroundChecker groundChecker;
 	public bool connected;
 	Rigidbody rigidbody;
+
+	protected float scaleWhenConnected;
 	
 	public virtual bool CanJump() {
 		return false;
@@ -34,9 +36,9 @@ public class Robot : MonoBehaviour {
 		if (connected) {
 			Vector3 tmpScale = sprite.localScale;
 			if (Input.GetAxis("Horizontal") < -0.1f) {
-				tmpScale.x = 1;
+				tmpScale.x = scaleWhenConnected;
 			} else if (Input.GetAxis("Horizontal") > 0.1f) {
-				tmpScale.x = -1;
+				tmpScale.x = -scaleWhenConnected;
 			}
 			sprite.localScale = tmpScale;
 		}
@@ -64,6 +66,8 @@ public class Robot : MonoBehaviour {
 		go.transform.position = _posGo;
 		go.transform.rotation = Quaternion.identity;
 		transform.rotation = Quaternion.identity;
+
+		scaleWhenConnected = Mathf.Abs(transform.localScale.x);
 	}
 	
 	public virtual void ReleaseParent() {

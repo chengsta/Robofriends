@@ -17,9 +17,9 @@ public class RobotJump : Robot {
 		if (connected) {
 			Vector3 tmpScale = sprite.localScale;
 			if (Input.GetAxis("Horizontal") < -0.1f) {
-				tmpScale.x = -1;
+				tmpScale.x = -scaleWhenConnected;
 			} else if (Input.GetAxis("Horizontal") > 0.1f) {
-				tmpScale.x = 1;
+				tmpScale.x = scaleWhenConnected;
 			}
 			sprite.localScale = tmpScale;
 		}
