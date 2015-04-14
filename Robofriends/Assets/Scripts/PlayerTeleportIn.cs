@@ -59,7 +59,10 @@ public class PlayerTeleportIn : MonoBehaviour {
 			yield return null;
 		}
 
+		transform.localScale = endScale;
+		transform.position = endPos;
 
+		gameObject.GetComponent<GroundChecker>().Init();
 		
 		gameObject.GetComponent<Player>().enabled = true;
 		gameObject.GetComponent<PlayerLockGun>().enabled = true;

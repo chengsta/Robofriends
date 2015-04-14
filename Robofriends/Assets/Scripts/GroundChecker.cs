@@ -3,16 +3,20 @@ using System.Collections;
 
 public class GroundChecker : MonoBehaviour {
 	private float distToGround;
-	private Vector3 width;
+	public Vector3 width;
 	// Use this for initialization
 	void Start () {
 		distToGround = GetComponent<Collider>().bounds.extents.y;
-		width = new Vector3(GetComponent<Collider>().bounds.extents.x, 0, 0);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//Debug.DrawLine (transform.position, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Color.red);
+	}
+
+	public void Init() {
+		width = new Vector3(GetComponent<Collider>().bounds.extents.x, 0, 0);
 	}
 	
 	public bool IsGrounded() {
