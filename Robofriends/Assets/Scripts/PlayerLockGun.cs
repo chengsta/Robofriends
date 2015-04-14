@@ -11,8 +11,8 @@ public class PlayerLockGun : MonoBehaviour {
 	public float vignetteFadeTime;
 	public AudioClip GunSound;
 
-	public Material redMat;
-	public Material greenMat;
+	public Material normal_Material;
+	public Material hit_Material;
 
 	void playSound(AudioClip sound, float vol){
 		GetComponent<AudioSource>().clip = sound;
@@ -47,9 +47,7 @@ public class PlayerLockGun : MonoBehaviour {
 		vignette.CrossFadeAlpha(1, vignetteFadeTime * 3, true);
 
 		while (Input.GetButton("Fire1")) {
-			print (GetComponent<LineRenderer>().material);
-
-			GetComponent<LineRenderer>().material = redMat;
+			GetComponent<LineRenderer>().material = normal_Material;
 			clickPos =  UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			clickPos.z = 0;
 
@@ -68,7 +66,7 @@ public class PlayerLockGun : MonoBehaviour {
 			GetComponent<LineRenderer>().SetPosition(1, lineEndpoint);
 
 			if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, robotMask)) {
-				GetComponent<LineRenderer>().material = greenMat;
+				GetComponent<LineRenderer>().material = hit_Material;
 			}
 
 			yield return null;
