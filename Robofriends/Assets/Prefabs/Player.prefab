@@ -739,8 +739,8 @@ MonoBehaviour:
   shootTime: .150000006
   vignetteFadeTime: .25
   GunSound: {fileID: 8300000, guid: df0f6171bdf696446a648bf950e26791, type: 3}
-  redMat: {fileID: 2100000, guid: 6686e64fc81081c4d8051f6287ca6618, type: 2}
-  greenMat: {fileID: 2100000, guid: 71d684619c4682d4e91ea4d21a532376, type: 2}
+  normal_Material: {fileID: 2100000, guid: 6686e64fc81081c4d8051f6287ca6618, type: 2}
+  hit_Material: {fileID: 2100000, guid: 859e859c22e6dcc4d9644e7a27af60a0, type: 2}
 --- !u!120 &12022266
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -806,8 +806,8 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
-    startWidth: .100000001
-    endWidth: .100000001
+    startWidth: .150000006
+    endWidth: .150000006
     m_StartColor:
       serializedVersion: 2
       rgba: 4294967295
