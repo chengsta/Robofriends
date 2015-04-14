@@ -908,7 +908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437148, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_Text
-      value: Stage 4
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 144958, guid: 6f8fb795289663547a440d524aeba4f7, type: 2}
       propertyPath: m_IsActive
