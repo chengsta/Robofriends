@@ -7,6 +7,8 @@ public class PlayerTeleportIn : MonoBehaviour {
 	public Color TeleportColorStart;
 	public Color TeleportColorEnd;
 
+	public float delay = 0.3f;
+
 	Vector3 startScale;
 	Vector3 endScale;
 	Vector3 endPos;
@@ -37,7 +39,7 @@ public class PlayerTeleportIn : MonoBehaviour {
 		float TeleportTimer = teleportAnimTime;
 
 
-		yield return new WaitForSeconds(.5f);
+		yield return new WaitForSeconds(delay);
 		//player.FindChild("Beam").gameObject.SetActive(true);
 		
 		while (TeleportTimer > 0) {
