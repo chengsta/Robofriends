@@ -41,7 +41,6 @@ public class PlayerLockGun : MonoBehaviour {
 		Vector3 clickPos;
 		Vector3 direction;
 		int layerMask = LayerMask.GetMask("Platform", "Robot");
-		int robotMask = LayerMask.GetMask ("Robot");
 		RaycastHit hit = new RaycastHit();
 
 		vignette.CrossFadeAlpha(1, vignetteFadeTime * 3, true);
@@ -65,8 +64,10 @@ public class PlayerLockGun : MonoBehaviour {
 			GetComponent<LineRenderer>().SetPosition(0, transform.position);
 			GetComponent<LineRenderer>().SetPosition(1, lineEndpoint);
 
-			if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, robotMask)) {
-				GetComponent<LineRenderer>().material = hit_Material;
+			if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, layerMask)) {
+				if (hit.collider.gameObject.GetComponent<Robot>()) {
+					GetComponent<LineRenderer>().material = hit_Material;
+				}
 			}
 
 			yield return null;
