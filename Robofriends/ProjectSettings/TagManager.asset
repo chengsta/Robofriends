@@ -41,6 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1998247161
+    locked: 0
+  - name: Switch
+    uniqueID: 492008527
+    locked: 0
+  - name: Robot
+    uniqueID: 2985955453
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
