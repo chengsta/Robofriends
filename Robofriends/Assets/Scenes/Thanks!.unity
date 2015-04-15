@@ -1548,7 +1548,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Stage 6
+  m_Text: 
 --- !u!222 &1714349113
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1794,6 +1794,60 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 497296, guid: 96f0298fe47ed9b41809ddf99407d4c9, type: 2}
   m_PrefabInternal: {fileID: 2133122794}
+--- !u!1001 &1906488162
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: FullText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -13.9700003
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 19.6700001
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 10296270, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_Text
+      value: Thanks for playing!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: FullText.Array.data[0]
+      value: Thanks for playing!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1909270444 stripped
 Transform:
   m_PrefabParentObject: {fileID: 497296, guid: 96f0298fe47ed9b41809ddf99407d4c9, type: 2}
