@@ -108,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.400000006, z: 0}
+  m_LocalPosition: {x: 0, y: -.400000006, z: -1.90999997}
   m_LocalScale: {x: .666666567, y: .279999971, z: 1}
   m_Children:
   - {fileID: 472024}
@@ -471,8 +471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeleportColorStart: {r: .572413683, g: 1, b: 0, a: 0}
   TeleportColorEnd: {r: .572549045, g: 1, b: 0, a: 0}
-  nextLevel: Stage 15 - Stairs
   EndLevel: {fileID: 8300000, guid: bc2fb15195acd744d840a1047f278b9e, type: 3}
+  nextLevel: Stage 15 - Stairs
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
