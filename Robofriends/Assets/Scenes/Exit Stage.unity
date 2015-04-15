@@ -1084,6 +1084,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!1001 &1217139815
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -17.7800007
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 19.1800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 10296270, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_Text
+      value: "Whew, glad I made it out of \nthat. Time to take this \ntreasure and
+        peace out."
+      objectReference: {fileID: 0}
+    - target: {fileID: 10296270, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: m_Color.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: FullText.Array.data[0]
+      value: Whew, glad I made it out of
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: FullText.Array.data[1]
+      value: That. Time to take this
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+      propertyPath: FullText.Array.data[2]
+      value: Treasure and peace out!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1407973756
 GameObject:
   m_ObjectHideFlags: 0
