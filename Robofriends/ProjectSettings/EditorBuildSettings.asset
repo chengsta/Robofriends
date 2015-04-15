@@ -54,6 +54,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage 21 - Gravity4.unity
   - enabled: 1
+    path: Assets/Scenes/Stage 23.5 - Gravbot3.unity
+  - enabled: 1
     path: Assets/Scenes/Stage 24 - Swap.unity
   - enabled: 1
     path: Assets/Scenes/Stage 26 - Swap1.unity
