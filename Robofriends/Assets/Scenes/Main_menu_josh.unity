@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c25b7df6d2928c47b76deb87faad6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 
+  nextLevel: IntroTextStage
 --- !u!1001 &1738028486
 Prefab:
   m_ObjectHideFlags: 0
