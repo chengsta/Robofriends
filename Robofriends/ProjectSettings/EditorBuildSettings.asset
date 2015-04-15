@@ -6,6 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main_menu_josh.unity
+  - enabled: 1
     path: Assets/Scenes/IntroTextStage.unity
   - enabled: 1
     path: Assets/Scenes/Stage 0 - Walk.unity
@@ -67,7 +69,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage 31 - 2BlockFall.unity
   - enabled: 1
     path: Assets/Scenes/Stage 32 - Disconnect.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main_menu.unity
   - enabled: 1
     path: Assets/Scenes/Stage 16 - SwitchClimb.unity
