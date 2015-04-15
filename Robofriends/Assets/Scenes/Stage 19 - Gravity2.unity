@@ -708,7 +708,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3a3e84c3d1d72e408d3cc633f13a462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!20 &398166185
+--- !u!20 &398166185 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2087044, guid: 1392cfd3f898d4848bbcda953ffc5c23,
     type: 2}
@@ -988,7 +988,7 @@ Transform:
   - {fileID: 1340555213}
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &561010834
+--- !u!1 &561010834 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 181026, guid: bf715a3bab08ce548a163d6dd2664240, type: 2}
   m_PrefabInternal: {fileID: 34228130}
@@ -1207,7 +1207,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 551342311}
   m_RootOrder: 13
---- !u!4 &818251652
+--- !u!4 &818251652 stripped
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 48143160}
@@ -1743,7 +1743,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3a3e84c3d1d72e408d3cc633f13a462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1148120348
+--- !u!4 &1148120348 stripped
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1752784792}
@@ -1985,7 +1985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466174, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.40999985
+      value: 6.19999981
       objectReference: {fileID: 0}
     - target: {fileID: 466174, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2009,7 +2009,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466174, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11466174, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
       propertyPath: door
@@ -2701,7 +2701,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3a3e84c3d1d72e408d3cc633f13a462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1903624495
+--- !u!4 &1903624495 stripped
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 94753635}

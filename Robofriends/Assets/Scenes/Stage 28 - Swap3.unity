@@ -407,6 +407,10 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 1849180302}
+    - target: {fileID: 490020, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.409999996
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba7f934d7a089274190b5df414d39c39, type: 2}
   m_IsPrefabParent: 0
