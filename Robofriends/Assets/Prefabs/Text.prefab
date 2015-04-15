@@ -90,7 +90,7 @@ MonoBehaviour:
   CursorCharacter: ' '
   AlternateCursorCharacter: ' '
   LetterInterval: .0399999991
-  EndLineWait: .5
+  EndLineWait: .25
   FullText:
   - Hello
   - Use space to jump
