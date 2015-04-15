@@ -141,6 +141,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1392cfd3f898d4848bbcda953ffc5c23, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1917044403 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 187044, guid: 1392cfd3f898d4848bbcda953ffc5c23, type: 2}
+  m_PrefabInternal: {fileID: 1849039586}
+--- !u!114 &1917044404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917044403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581877bd52271114998064879b321fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TeleportColorStart: {r: 0, g: 0, b: 0, a: 0}
+  TeleportColorEnd: {r: 0, g: 0, b: 0, a: 0}
+  EndLevel: {fileID: 0}
+  nextLevel: Stage 0 - Walk
 --- !u!1001 &1955672181
 Prefab:
   m_ObjectHideFlags: 0
