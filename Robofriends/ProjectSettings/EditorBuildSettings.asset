@@ -81,13 +81,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Exit Stage.unity
   - enabled: 1
     path: Assets/Scenes/Thanks!.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage 4.5 - Left Click.unity
   - enabled: 1
     path: Assets/Scenes/Stage 20.5 - Gravity 3.5.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage 8.5 - Glass.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage 8.75 - Left Click.unity
   - enabled: 1
     path: Assets/Scenes/Stage 5.5 - Glass.unity
@@ -97,3 +97,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage 28.5 - Swap 4.unity
   - enabled: 1
     path: Assets/Scenes/Stage 28.75 - Swap5.unity
+  - enabled: 1
+    path: Assets/Scenes/Exit Stage 2.unity

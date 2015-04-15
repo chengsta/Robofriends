@@ -5,6 +5,7 @@ using System.Collections;
 public class Manager : MonoBehaviour {
 
 	public bool show_fail_state = false;
+	public bool show_fade_in = true;
 	
 	private Image death;
 	public GameObject player;
@@ -19,10 +20,12 @@ public class Manager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		Time.timeScale = 1f;
-		death = GameObject.FindGameObjectWithTag("Death").GetComponent<Image>();
-		player = GameObject.Find ("Player");
-		death.CrossFadeAlpha(0, .5f, true);
+		if (show_fade_in) {
+			Time.timeScale = 1f;
+			death = GameObject.FindGameObjectWithTag("Death").GetComponent<Image>();
+			player = GameObject.Find ("Player");
+			death.CrossFadeAlpha(0, .5f, true);
+		}
 	}
 
 	public void FailState () {
