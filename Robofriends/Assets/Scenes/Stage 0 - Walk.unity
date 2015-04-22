@@ -133,7 +133,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &239812068 stripped
+--- !u!4 &239812068
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 176896197}
@@ -495,7 +495,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
---- !u!4 &1105229627 stripped
+--- !u!4 &1105229627
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1495649174}
@@ -817,7 +817,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1626477840 stripped
+--- !u!4 &1626477840
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1385227811}
@@ -1410,15 +1410,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[0]
-      value: I FOUND IT!
+      value: What is this?
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[1]
-      value: I'm so good at this
+      value: An artifact from an
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[2]
-      value: I can move there using
+      value: ancient civilization?
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: alternateCursor
@@ -1426,7 +1426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[3]
-      value: 'the a and d keys '
+      value: (Use A and D to move)
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: EndLineWait
