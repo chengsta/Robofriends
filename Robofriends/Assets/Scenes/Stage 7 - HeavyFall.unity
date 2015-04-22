@@ -324,7 +324,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 34
---- !u!4 &338637795 stripped
+--- !u!4 &338637795
 Transform:
   m_PrefabParentObject: {fileID: 497296, guid: 96f0298fe47ed9b41809ddf99407d4c9, type: 2}
   m_PrefabInternal: {fileID: 889229961}
@@ -370,7 +370,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b648678b28d7847dcba2fdf4fa6c94e4, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &384200354 stripped
+--- !u!4 &384200354
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 708524609}
@@ -852,7 +852,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3a3e84c3d1d72e408d3cc633f13a462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &763603597 stripped
+--- !u!4 &763603597
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1515548105}
@@ -984,7 +984,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &857752352 stripped
+--- !u!4 &857752352
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 882080139}
@@ -1019,7 +1019,7 @@ Transform:
   - {fileID: 763603597}
   m_Father: {fileID: 0}
   m_RootOrder: 11
---- !u!4 &872331963 stripped
+--- !u!4 &872331963
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1855616728}
@@ -1073,7 +1073,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &882588320 stripped
+--- !u!4 &882588320
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1642532409}
@@ -1334,7 +1334,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3a3e84c3d1d72e408d3cc633f13a462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1006220320 stripped
+--- !u!4 &1006220320
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 933446183}
@@ -1606,7 +1606,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[3]
-      value: Can't Jump
+      value: I can jump
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[0]
@@ -1614,11 +1614,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[1]
-      value: Looks heavy...
+      value: looks heavy
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[2]
-      value: Probably
+      value: I don't think
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: EndLineWait
@@ -1626,11 +1626,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[4]
-      value: 'While '
+      value: with it
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[5]
-      value: connected
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
@@ -1713,7 +1713,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1529285818 stripped
+--- !u!4 &1529285818
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1188331038}

@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3a3e84c3d1d72e408d3cc633f13a462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &19066426 stripped
+--- !u!4 &19066426
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 803928565}
@@ -413,11 +413,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
---- !u!4 &384200354 stripped
+--- !u!4 &384200354
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 708524609}
---- !u!4 &394983949 stripped
+--- !u!4 &394983949
 Transform:
   m_PrefabParentObject: {fileID: 489548, guid: b1ec96ef0578d3f45a4ef0b0f3e6361c, type: 2}
   m_PrefabInternal: {fileID: 256420697}
@@ -467,7 +467,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &434810559 stripped
+--- !u!4 &434810559
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 434810558}
@@ -668,7 +668,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &753973984 stripped
+--- !u!4 &753973984
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1289904705}
@@ -846,7 +846,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1b54bdda6880b846a44ee30185ae6ba, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &882588320 stripped
+--- !u!4 &882588320
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1642532409}
@@ -896,7 +896,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &963249223 stripped
+--- !u!4 &963249223
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 687601342}
@@ -950,7 +950,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1006220320 stripped
+--- !u!4 &1006220320
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 933446183}
@@ -1253,11 +1253,11 @@ Transform:
   - {fileID: 434810559}
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!4 &1447762038 stripped
+--- !u!4 &1447762038
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 443413004}
---- !u!4 &1518382394 stripped
+--- !u!4 &1518382394
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 978709580}
@@ -1274,7 +1274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -18
+      value: -18.3799992
       objectReference: {fileID: 0}
     - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1310,15 +1310,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[0]
-      value: If I ever mess up I can
+      value: In case of emergency
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[1]
-      value: 'Just press esc to '
+      value: I can use my time turner
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[2]
-      value: start over again
+      value: (Use ESC to reset the level)
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: EndLineWait
@@ -1723,7 +1723,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47bea82e42d5404468165535b8e779f6, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1734403326 stripped
+--- !u!4 &1734403326
 Transform:
   m_PrefabParentObject: {fileID: 442046, guid: 47bea82e42d5404468165535b8e779f6, type: 2}
   m_PrefabInternal: {fileID: 1734403325}

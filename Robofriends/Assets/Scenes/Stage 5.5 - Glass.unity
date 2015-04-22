@@ -160,7 +160,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &295514581 stripped
+--- !u!4 &295514581
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 188634036}
@@ -347,7 +347,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
---- !u!4 &384200354 stripped
+--- !u!4 &384200354
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 708524609}
@@ -767,11 +767,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b648678b28d7847dcba2fdf4fa6c94e4, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &882588320 stripped
+--- !u!4 &882588320
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 1642532409}
---- !u!1 &897311758 stripped
+--- !u!1 &897311758
 GameObject:
   m_PrefabParentObject: {fileID: 181026, guid: bf715a3bab08ce548a163d6dd2664240, type: 2}
   m_PrefabInternal: {fileID: 1801656380}
@@ -908,7 +908,7 @@ Transform:
   - {fileID: 295514581}
   m_Father: {fileID: 0}
   m_RootOrder: 25
---- !u!4 &1006220320 stripped
+--- !u!4 &1006220320
 Transform:
   m_PrefabParentObject: {fileID: 421616, guid: 7ae7f4e4a2630eb489dd3f6dcac8dc30, type: 2}
   m_PrefabInternal: {fileID: 933446183}
@@ -1231,11 +1231,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[0]
-      value: 'Hmm..Wonder if I can '
+      value: This laser should propagate
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[1]
-      value: Shoot through the glass
+      value: through that glass panel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
@@ -1637,7 +1637,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &1682307574 stripped
+--- !u!1 &1682307574
 GameObject:
   m_PrefabParentObject: {fileID: 186706, guid: ed6bd94a6bf1e3844814cb45c3e42a2d, type: 2}
   m_PrefabInternal: {fileID: 1147992624}

@@ -198,7 +198,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.8000002
+      value: -20.6399994
       objectReference: {fileID: 0}
     - target: {fileID: 449458, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: m_LocalPosition.y
@@ -234,15 +234,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[0]
-      value: Looks like if someting
+      value: I could utilize the weight of
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[1]
-      value: Pushes the switch down
+      value: this robot to push that switch
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: FullText.Array.data[2]
-      value: the door will slide up
+      value: (Right click to disconnect)
       objectReference: {fileID: 0}
     - target: {fileID: 11467868, guid: 45423ec32105f44d78d4f7f8d4854886, type: 2}
       propertyPath: EndLineWait
