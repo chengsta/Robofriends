@@ -61,7 +61,8 @@ public class PlayerLockGun : MonoBehaviour {
 				lineEndpoint = transform.position + (direction * maxShootDistance);
 			}
 
-			GetComponent<LineRenderer>().SetPosition(0, transform.position);
+			Transform laserStart = transform.FindChild("Gun").FindChild("GunSprite").FindChild("LaserStart");
+			GetComponent<LineRenderer>().SetPosition(0, laserStart.position);
 			GetComponent<LineRenderer>().SetPosition(1, lineEndpoint);
 
 			if (Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity, layerMask)) {
