@@ -86,6 +86,12 @@ public class Robot : MonoBehaviour {
 	}
 	
 	public virtual void hitBySpikes() {
+		/*Vector3 vel = transform.parent.GetComponent<Rigidbody> ().velocity;
+		vel.y = 0f;
+		transform.parent.GetComponent<Rigidbody>().velocity = vel;*/
+		if (connected) {
+			transform.parent.GetComponent<Rigidbody> ().useGravity = true;
+		}
 		Destroy(this.gameObject);
 	}
 	
