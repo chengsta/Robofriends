@@ -89,7 +89,9 @@ public class Robot : MonoBehaviour {
 		/*Vector3 vel = transform.parent.GetComponent<Rigidbody> ().velocity;
 		vel.y = 0f;
 		transform.parent.GetComponent<Rigidbody>().velocity = vel;*/
-		transform.parent.GetComponent<Rigidbody> ().useGravity = true;
+		if (connected) {
+			transform.parent.GetComponent<Rigidbody> ().useGravity = true;
+		}
 		Destroy(this.gameObject);
 	}
 	
