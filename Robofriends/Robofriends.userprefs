@@ -1,19 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Exit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Robot.cs">
     <Files>
-      <File FileName="Assets\Scripts\MainMenuTrigger.cs" Line="16" Column="26" />
-      <File FileName="Assets\Scripts\Player.cs" Line="17" Column="44" />
+      <File FileName="Assets\Scripts\RobotGrav.cs" Line="31" Column="3" />
+      <File FileName="Assets\Barker's Retro Text Printer Free\Scripts\RetroPrinterScriptBasic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Spikes.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Manager.cs" Line="25" Column="4" />
+      <File FileName="Assets\Scripts\Manager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerLockGun.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\InitializeDeath.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GroundChecker.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerTeleportIn.cs" Line="1" Column="1" />
       <File FileName="Assets\Barker's Retro Text Printer Free\readme.txt" Line="1" Column="1" />
-      <File FileName="Assets\Barker's Retro Text Printer Free\Scripts\RetroPrinterScriptBasic.cs" Line="32" Column="31" />
-      <File FileName="Assets\Scripts\Exit.cs" Line="11" Column="4" />
+      <File FileName="Assets\Scripts\Exit.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Robot.cs" Line="92" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
