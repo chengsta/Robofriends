@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Robot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpecialLevels\Earthquake.cs">
     <Files>
-      <File FileName="Assets\Scripts\RobotGrav.cs" Line="31" Column="3" />
+      <File FileName="Assets\Scripts\SpecialLevels\Earthquake.cs" Line="64" Column="19" />
+      <File FileName="Assets\Scripts\RobotGrav.cs" Line="1" Column="1" />
       <File FileName="Assets\Barker's Retro Text Printer Free\Scripts\RetroPrinterScriptBasic.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MainMenuTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="196" Column="3" />
       <File FileName="Assets\Scripts\Spikes.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Manager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerLockGun.cs" Line="1" Column="1" />
@@ -15,7 +16,7 @@
       <File FileName="Assets\Barker's Retro Text Printer Free\readme.txt" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Exit.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Robot.cs" Line="92" Column="65" />
+      <File FileName="Assets\Scripts\Robot.cs" Line="92" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
