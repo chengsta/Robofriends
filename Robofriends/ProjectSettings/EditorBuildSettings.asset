@@ -99,3 +99,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage 28.75 - Swap5.unity
   - enabled: 1
     path: Assets/Scenes/Exit Stage 2.unity
+  - enabled: 1
+    path: Assets/Scenes/Stage 31.5 Earthquake.unity
