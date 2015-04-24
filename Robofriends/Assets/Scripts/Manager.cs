@@ -7,19 +7,19 @@ public class Manager : MonoBehaviour {
 	public bool show_fail_state = false;
 	public bool show_fade_in = true;
 	
-	private Image death;
+	protected Image death;
 	public GameObject player;
-	IEnumerator dead(float waitTime) {
+	public IEnumerator dead(float waitTime) {
 		//player.GetComponent<Player>().enabled = false;
 		player.GetComponent<PlayerLockGun>().enabled = false;
 		yield return new WaitForSeconds(waitTime);
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
-	void Awake() {
+	public void Awake() {
 	}
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		if (show_fade_in) {
 			Time.timeScale = 1f;
 			death = GameObject.FindGameObjectWithTag("Death").GetComponent<Image>();
@@ -36,7 +36,7 @@ public class Manager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public virtual void Update () {
 //		if (Input.GetButtonDown("Cancel")) {
 //			Application.LoadLevel("Main_menu");
 //		}
