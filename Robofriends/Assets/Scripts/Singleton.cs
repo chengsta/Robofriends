@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Singleton : MonoBehaviour {
-	private static Singleton instance = null;
+	public static Singleton instance = null;
 	public static Singleton Instance {
 		get { return instance; }
 	}
@@ -11,8 +11,6 @@ public class Singleton : MonoBehaviour {
 			Singleton temp = instance;
 			instance = this;
 			Destroy(temp.gameObject);
-
-			return;
 		} 
 
 		else {
