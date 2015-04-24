@@ -13,13 +13,13 @@ public class Earthquake : MonoBehaviour {
 	
 	public float amountToMove;
 	public float lerpTime;
-	
+
+	private bool first = false;
 	private Vector3 endPos;
 	private Vector3 beginPos;
 	
 	// Use this for initialization
 	void Start () {
-		StartCoroutine("EarthquakeStart");
 		endPos = end.transform.position;
 		beginPos = endPos;
 		beginPos.y -= amountToMove;
@@ -45,6 +45,15 @@ public class Earthquake : MonoBehaviour {
 		end.transform.position = endPos;
 	}
 
+	void OnTriggerEnter (Collider coll) {
+		if (!first) {
+			first = true;
+			Transform to = transform.GetChild(0);
+			Destroy(to.gameObject);
+			StartCoroutine ("EarthquakeStart");
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -53,8 +62,6 @@ public class Earthquake : MonoBehaviour {
 	IEnumerator EarthquakeStart() {
 		float originalPosition = cam.transform.localPosition.x;
 		float timer = 0;
-	
-		yield return new WaitForSeconds(4f);
 
 		while (timer < shakeTime) {
 			float ratio = timer / shakeTime;
